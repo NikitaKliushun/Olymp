@@ -30,3 +30,16 @@
 *.exe
 *.out
 *.app
+
+*.exe
+*.err
+*.out
+*.in
+*.bak
+*.txt
+*.o
+*.bak
+*.a
+*.bat
+*.res
+*.pp
