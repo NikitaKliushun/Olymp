@@ -1,0 +1,2 @@
+The fastest train is "a_A-z 2".
+It's speed is 27 km/h, approximately.

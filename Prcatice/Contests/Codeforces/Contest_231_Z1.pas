@@ -1,0 +1,5 @@
+Var
+ : Longint;
+
+Begin
+End.
