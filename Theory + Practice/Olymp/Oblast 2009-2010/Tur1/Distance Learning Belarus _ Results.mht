@@ -1,0 +1,1432 @@
+Content-Type: multipart/related; start=<op.mhtml.1263300124640.ece356032a5a0944@86.57.240.237>; boundary=----------Ct0vtYfq4SfH5OoD8hzozk
+Content-Location: http://www.dl.gsu.by/restable.jsp?hd=2&hid=70481244&u.c=662&pi=6&pi=7&pi=4&pi=10&u.a&lng=rus
+Subject: =?utf-8?Q?Distance=20Learning=20Belarus=20|=20Results?=
+MIME-Version: 1.0
+
+------------Ct0vtYfq4SfH5OoD8hzozk
+Content-Disposition: inline; filename=restable.htm
+Content-Type: text/html; charset=windows-1251; name=restable.htm
+Content-Id: <op.mhtml.1263300124640.ece356032a5a0944@86.57.240.237>
+Content-Location: http://www.dl.gsu.by/restable.jsp?hd=2&hid=70481244&u.c=662&pi=6&pi=7&pi=4&pi=10&u.a&lng=rus
+Content-Transfer-Encoding: Quoted-Printable
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+        <title>Distance Learning Belarus | Results</title>
+        <link rel=3D"stylesheet" type=3D"text/css" href=3D"dlbstyle.css"=
+>
+        <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3D=
+windows-1251">
+<script TYPE=3D"text/javascript" language=3D"JavaScript">
+ <!--
+        function invert(id)
+        {
+        =
+
+                if( id =3D=3D 6 )
+                {
+                    for (i =3D 0; i < 1; i++)
+                    {
+                        document.getElementById('filter_6_' + i).click()=
+;
+                    }
+                }
+        =
+
+                if( id =3D=3D 7 )
+                {
+                    for (i =3D 0; i < 13; i++)
+                    {
+                        document.getElementById('filter_7_' + i).click()=
+;
+                    }
+                }
+        =
+
+                if( id =3D=3D 4 )
+                {
+                    for (i =3D 0; i < 30; i++)
+                    {
+                        document.getElementById('filter_4_' + i).click()=
+;
+                    }
+                }
+        =
+
+                if( id =3D=3D 10 )
+                {
+                    for (i =3D 0; i < 9; i++)
+                    {
+                        document.getElementById('filter_10_' + i).click(=
+);
+                    }
+                }
+        =
+
+
+        }
+
+        function applyFilter() {
+                filter=3D"";
+
+        =
+
+
+        if(eval('filter_user.checked'))
+        {
+            filter +=3D "&u.a";
+        }
+
+
+                for (i =3D 0; i < 1; i++) {
+                        if (eval('filter_6_' + i + '.checked')) {
+                                filter +=3D "&u.i.6=3D" + escape(eval('f=
+ilter_6_' + i + '.value'));
+                        }
+                }
+
+                for (i =3D 0; i < 13; i++) {
+                        if (eval('filter_7_' + i + '.checked')) {
+                                filter +=3D "&u.i.7=3D" + escape(eval('f=
+ilter_7_' + i + '.value'));
+                        }
+                }
+
+                for (i =3D 0; i < 30; i++) {
+                        if (eval('filter_4_' + i + '.checked')) {
+                                filter +=3D "&u.i.4=3D" + escape(eval('f=
+ilter_4_' + i + '.value'));
+                        }
+                }
+
+                for (i =3D 0; i < 9; i++) {
+                        if (eval('filter_10_' + i + '.checked')) {
+                                filter +=3D "&u.i.10=3D" + escape(eval('=
+filter_10_' + i + '.value'));
+                        }
+                }
+
+                for (i =3D 0; i < 0; i++) {
+                        if (eval('filter_fan_' + i + '.checked')) {
+                                filter +=3D "&f.l=3D" + escape(eval('fil=
+ter_fan_' + i + '.value'));
+                        }
+                }
+                for (i =3D 0; i < 0; i++) {
+                        if (eval('filter_fan_' + i + '.checked')) {
+                                filter +=3D "&f.l=3D" + escape(eval('fil=
+ter_fan_' + i + '.value'));
+                        }
+                }
+
+                window.location =3D '?hd=3D2&hid=3D70481244&obid=3D70481=
+244&pi=3D6&pi=3D7&pi=3D4&pi=3D10&u.c=3D662&lng=3Drus' + filter;
+        }
+
+        var timerId =3D 0;
+
+-->
+</script>
+
+<style>
+
+th {
+  font-family: tahoma,arial,helvetica,geneva,sans-serif;
+  font-weight: bold;
+  font-size: 8pt;
+  text-align: center;
+  vertical-align: center;
+  background-color: #ffcccc;
+  color: #000000;
+}
+
+tr.band td{
+  background-color: #dcdcdc;
+  color: black
+}
+
+
+td {
+  font-family: tahoma,arial,helvetica,geneva,sans-serif;
+  font-size: 8pt;
+  background-color: #ffffff;
+  text-align: center;
+  white-space: nowrap;
+
+}
+/* =EA =F1=EE=E6=E0=EB=E5=ED=E8=FE, white-space =EF=EE=E4=E4=E5=F0=E6=E8=
+=E2=E0=E5=F2=F1=FF =F2=EE=EB=FC=EA=EE =ED=E0=F7=E8=ED=E0=FF =F1 IE6 :( *=
+/
+
+td.autowrap {
+  white-space: normal;
+}
+
+td.bar {
+  background-color: #990000;
+  padding: 2px;
+  text-align: left;
+}
+
+td.bar-r {
+  background-color: #990000;
+  padding: 2px;
+  text-align: right;
+}
+
+
+td.r {
+  text-align:right;
+  width:1%;
+}
+
+td.l {
+  text-align:left;
+  width:1%;
+}
+
+</style>
+<script language=3D"JavaScript">
+function TableLigh() {
+    if (document.getElementById) {
+        tables =3D document.getElementsByTagName("table")
+        for (i=3D0;i<tables.length;i++) {
+            if (tables[i].className =3D=3D "nowrap") {
+                trs =3D tables[i].getElementsByTagName("tr")
+                for (j=3D0;j<trs.length;j++) {
+                    if (trs[j].className !=3D "th") {
+                        trs[j].onmouseover =3D function() {
+                            this.className =3D "band";
+                            return false
+                        }
+                        trs[j].onmouseout =3D function() {
+                            this.className =3D "";
+                            return false
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+</script>
+</head>
+<body onLoad=3D"TableLigh()">
+
+
+
+
+
+
+<div align=3D"center">
+<img src=3D"/art/dlb.gif" width=3D"584" height=3D"41" alt=3D"Distance Le=
+arning Belarus">
+<table width=3D"600" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><t=
+r>
+<td class=3D"bar" nowrap>
+&nbsp;&nbsp;
+<a class=3D"menu" href=3D"/default.asp">=CD=E0=F7=E0=EB=EE</a>&nbsp;&nbs=
+p;&nbsp;
+<a class=3D"menu" href=3D"/training1.asp?id=3D84">=CE=E1=F3=F7=E5=ED=E8=E5=
+</a>&nbsp;&nbsp;&nbsp;
+<a class=3D"menu" href=3D"/competitions1.asp?id=3D84">=D1=EE=F0=E5=E2=ED=
+=EE=E2=E0=ED=E8=E5</a>&nbsp;&nbsp;&nbsp;
+<a class=3D"menu" href=3D"/archive1.asp?id=3D84">=C0=F0=F5=E8=E2</a>&nbs=
+p;&nbsp;&nbsp;
+<a class=3D"menu" href=3D"/faq.asp">=C2=EE=EF=F0=EE=F1=FB</a>&nbsp;&nbsp=
+;&nbsp;
+<a class=3D"menu" href=3D"/links.asp">=D1=F1=FB=EB=EA=E8</a>&nbsp;&nbsp;=
+&nbsp;
+<a class=3D"menu" href=3D"/olymp/" title=3D"=D1=E0=E9=F2 =CE=EB=E8=EC=EF=
+">=CE=EB=E8=EC=EF</a>&nbsp;&nbsp;&nbsp;
+
+</td><td class=3D"bar" align=3D"right">
+
+
+<a class=3D"menu" href=3D"/restable.jsp?lng=3Deng&hd=3D2&hid=3D70481244&=
+u.c=3D662&pi=3D6&pi=3D7&pi=3D4&pi=3D10&u.a">English</a>&nbsp;&nbsp;&nbsp=
+;
+
+</td>
+</tr>
+</table>
+</div>
+&nbsp;
+
+<div align=3D"center"><table border =3D 0><tr>
+<td><table width=3D1 border=3D0><tr><td nowrap><a href=3D"restable.jsp?h=
+d=3D1&hid=3D70481244&obid=3D70481244&pi=3D6&pi=3D7&pi=3D4&pi=3D10&u.c=3D=
+662&lng=3Drus&u.a">=CB=E8=F7=ED=FB=E9 =E7=E0=F7=B8=F2 (3-11 =EA=EB)</a><=
+/td></tr><tr><td  width=3D0><img src=3D"art/red-dot.gif" width =3D "100%=
+" height=3D"3"></td></tr></table></td>
+</td></tr></table>
+
+
+
+<div id=3D"testdiv" style=3D"position:absolute; z-index:1000; left:0; to=
+p:0; display:">
+<img src=3D"art/cnt1.gif" width=3D"15" height=3D"15" onClick=3D"settings=
+div.style.display=3D'';return false;">
+</div>
+
+
+
+<div id=3D"settingsdiv" style=3D"position:absolute;z-index:1000; left:10=
+; top:5; display:none" align=3D"left"
+        onMouseOver=3D"clearTimeout(timerId);"
+        onMouseOut=3D"timerId=3DsetTimeout('settingsdiv.style.display=3D=
+\'none\'', 3000);return false;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0"
+>
+
+<tr><td class=3D"bar" nowrap><font size=3D1px><b>
+<a class=3D"menu" href=3D"?hd=3D3&hid=3D70481244&obid=3D70481244&pi=3D6&=
+pi=3D7&pi=3D4&pi=3D10&u.c=3D662&lng=3Drus&u.a"> + deep</a>
+
+
+<a class=3D"menu" href=3D"?hd=3D1&hid=3D70481244&obid=3D70481244&pi=3D6&=
+pi=3D7&pi=3D4&pi=3D10&u.c=3D662&lng=3Drus&u.a">deep -</a>
+
+</b></font></td></tr>
+
+<tr><td colspan=3D"2" class=3D"bar" nowrap><font size=3D1px><b>
+<a class=3D"menu" href=3D"?hd=3D2&hid=3D70481244&obid=3D70481244&pi=3D6&=
+pi=3D7&pi=3D4&pi=3D10&u.c=3D662&lng=3Drus&u.a&hi=3D1">hide info</a>
+</b></font></td></tr>
+
+<tr><td colspan=3D"2" class=3D"bar" nowrap><font size=3D1px><b>
+<a class=3D"menu" href=3D"?hd=3D2&hid=3D70481244&obid=3D70481244&pi=3D6&=
+pi=3D7&pi=3D4&pi=3D10&u.c=3D662&lng=3Drus&u.a&si=3D1">summary &gt;&gt</a=
+>
+</b></font></td></tr>
+<SCRIPT LANGUAGE=3D"JavaScript">
+  var tmpl =3D 0;
+  function submit_ratings(hid, title) {
+    document.forms["formGroup"].action=3D'/Ratings.jsp';
+    if (title) {
+        document.forms["formGroup"].loadTemplateTitle.value=3Dtitle;
+        document.forms["formGroup"].hid.value=3Dhid;
+    }
+    document.forms["formGroup"].backRef.value=3Dlocation.href;
+    document.forms["formGroup"].submit();
+    return true;
+  }
+  function showTemplates( show ) {
+      var temp =3D document.getElementById('templates');
+      if (temp =3D=3D null)
+          return;
+      if (show=3D=3D'block') {
+          tmpl ++;
+          temp.style.left =3D 60;
+          temp.style.top =3D 53;
+          temp.style.display =3D show;
+      } else {
+          if (--tmpl =3D=3D 0)
+              temp.style.display =3D show;
+      }
+  }
+</SCRIPT>
+<tr onMouseOver=3D"showTemplates('block');" onMouseOut=3D"showTemplates(=
+'none');"><td colspan=3D"2" class=3D"bar" nowrap><font size=3D1px><b>
+<a class=3D"menu" href=3D"javascript: submit_ratings();">Ratings</a>
+</b></font></td></tr>
+
+<tr><td colspan=3D"2" class=3D"bar" nowrap><font size=3D1px><b>
+<a class=3D"menu" href=3D"tableByTimes.jsp?hd=3D2&hid=3D70481244&obid=3D=
+70481244&pi=3D6&pi=3D7&pi=3D4&pi=3D10&u.c=3D662&lng=3Drus&u.a">TableByTi=
+me</a>
+</b></font></td></tr>
+
+    <tr><td colspan=3D"2" class=3D"bar" nowrap><font size=3D1px><b>
+    <a class=3D"menu" href=3D"statistics1.jsp?hd=3D2&hid=3D70481244&obid=
+=3D70481244&pi=3D6&pi=3D7&pi=3D4&pi=3D10&u.c=3D662&lng=3Drus&u.a">OtherD=
+ata</a>
+    </b></font></td></tr>
+
+ =
+
+
+
+<tr>
+    <td colspan=3D"2" class=3D"bar" nowrap><font color=3D"white">
+    =
+
+        <a href=3D"/Editor/Range/showAutoMark.do?courseID=3D662&amp;grou=
+pID=3D0" class=3D"menu">AutoMark</a>
+    </font></td>
+</tr>
+<tr><td></td></tr>
+
+
+
+<tr><td colspan=3D"2" class=3D"bar" nowrap><font size=3D1px><b>
+<a class=3D"menu" href=3D"?hd=3D2&hid=3D70481244&obid=3D70481244&pi=3D6&=
+pi=3D7&pi=3D4&pi=3D10&u.c=3D662&lng=3Drus&u.a&c.l=3D4&c.n=3D2&c.s=3D2&c.=
+s=3D7">ACM</a>
+</b></font></td></tr>
+
+<tr><td colspan=3D"2" class=3D"bar" nowrap><font size=3D1px><b>
+<a class=3D"menu" href=3D"?hd=3D2&hid=3D70481244&obid=3D70481244&pi=3D6&=
+pi=3D7&pi=3D4&pi=3D10&u.c=3D662&lng=3Drus&u.a&c.l=3D1&c.n=3D1&c.s=3D1">=EF=
+=EE =E1=E0=EB=EB=E0=EC</a>
+</b></font></td></tr>
+
+<tr><td colspan=3D"2" class=3D"bar" nowrap><font size=3D1px><b>
+<a class=3D"menu" href=3D"?hd=3D2&hid=3D70481244&obid=3D70481244&pi=3D6&=
+pi=3D7&pi=3D4&pi=3D10&u.c=3D662&lng=3Drus&u.a&c.l=3D2&c.n=3D2&c.s=3D2">=EF=
+=EE =E7=E0=E4=E0=F7=E0=EC</a>
+</b></font></td></tr>
+
+<tr><td colspan=3D"2" class=3D"bar" nowrap><font size=3D1px><b>
+<a class=3D"menu" href=3D"?hd=3D2&hid=3D70481244&obid=3D70481244&pi=3D6&=
+pi=3D7&pi=3D4&pi=3D10&u.c=3D662&lng=3Drus&u.a&c.l=3D4&c.n=3D2&c.s=3D2&c.=
+s=3D5">=EF=EE =EF=EE=EF=FB=F2=EA=E0=EC</a>
+</b></font></td></tr>
+
+<tr><td colspan=3D"2" class=3D"bar" nowrap><font size=3D1px><b>
+<a class=3D"menu" href=3D"doc\use\restable_user.htm">Help</a>
+</b></font></td></tr>
+
+<tr><td class=3D"bar"><font size=3D1px color=3D"white"><b><input id=3D"f=
+ilter_user" type=3D"checkbox"  checked>Hide empty users</b></font></td><=
+/tr>
+
+</table>
+
+<div id=3D"filterdiv" style=3D"display:">
+
+
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" bgcolor=3D"#9900=
+00">
+<tr><td colspan=3D"9"></td></tr>
+<tr>
+
+<td class=3D"bar"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" bgcolor=3D"#990000">
+<tr><td class=3D"bar"><font size=3D1px color=3D"white"><b>=D1=F2=F0=E0=ED=
+=E0</b></font></td></tr>
+
+<tr><td class=3D"bar"><font size=3D1px color=3D"white"><b><input id=3D"f=
+ilter_6_0" value=3D"=C1=E5=EB=E0=F0=F3=F1=FC" type=3D"checkbox" >=C1=E5=EB=
+=E0=F0=F3=F1=FC</b></font></td></tr>
+
+
+<tr><td class=3D"bar"><a class=3D"menu" href=3D"javascript:invert(6);">I=
+nvert</a></td></tr>
+</table></td><td></td>
+
+<td class=3D"bar"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" bgcolor=3D"#990000">
+<tr><td class=3D"bar"><font size=3D1px color=3D"white"><b>=C3=EE=F0=EE=E4=
+</b></font></td></tr>
+
+<tr><td class=3D"bar"><font size=3D1px color=3D"white"><b><input id=3D"f=
+ilter_7_0" value=3D" =D0=E5=F7=E8=F6=E0" type=3D"checkbox" > =D0=E5=F7=E8=
+=F6=E0</b></font></td></tr>
+
+
+<tr><td class=3D"bar"><font size=3D1px color=3D"white"><b><input id=3D"f=
+ilter_7_1" value=3D"=C3=EE=EC=E5=EB=FC" type=3D"checkbox" >=C3=EE=EC=E5=EB=
+=FC</b></font></td></tr>
+
+
+<tr><td class=3D"bar"><font size=3D1px color=3D"white"><b><input id=3D"f=
+ilter_7_2" value=3D"=C6=EB=EE=E1=E8=ED" type=3D"checkbox" >=C6=EB=EE=E1=E8=
+=ED</b></font></td></tr>
+
+
+<tr><td class=3D"bar"><font size=3D1px color=3D"white"><b><input id=3D"f=
+ilter_7_3" value=3D"=CA=E0=EB=E8=ED=EA=EE=E2=E8=F7=E8" type=3D"checkbox"=
+ >=CA=E0=EB=E8=ED=EA=EE=E2=E8=F7=E8</b></font></td></tr>
+
+
+<tr><td class=3D"bar"><font size=3D1px color=3D"white"><b><input id=3D"f=
+ilter_7_4" value=3D"=CC=E8=ED=F1=EA" type=3D"checkbox" >=CC=E8=ED=F1=EA<=
+/b></font></td></tr>
+
+
+<tr><td class=3D"bar"><font size=3D1px color=3D"white"><b><input id=3D"f=
+ilter_7_5" value=3D"=CC=EE=E7=FB=F0=FC" type=3D"checkbox" >=CC=EE=E7=FB=F0=
+=FC</b></font></td></tr>
+
+
+<tr><td class=3D"bar"><font size=3D1px color=3D"white"><b><input id=3D"f=
+ilter_7_6" value=3D"=CE=EA=F2=FF=E1=F0=FC=F1=EA=E8=E9" type=3D"checkbox"=
+ >=CE=EA=F2=FF=E1=F0=FC=F1=EA=E8=E9</b></font></td></tr>
+
+
+<tr><td class=3D"bar"><font size=3D1px color=3D"white"><b><input id=3D"f=
+ilter_7_7" value=3D"=CF=EE=EB=EE=F6=EA" type=3D"checkbox" >=CF=EE=EB=EE=F6=
+=EA</b></font></td></tr>
+
+
+<tr><td class=3D"bar"><font size=3D1px color=3D"white"><b><input id=3D"f=
+ilter_7_8" value=3D"=D0=E5=EA=F2=E0" type=3D"checkbox" >=D0=E5=EA=F2=E0<=
+/b></font></td></tr>
+
+
+<tr><td class=3D"bar"><font size=3D1px color=3D"white"><b><input id=3D"f=
+ilter_7_9" value=3D"=D0=E5=F7=E8=F6=E0" type=3D"checkbox" >=D0=E5=F7=E8=F6=
+=E0</b></font></td></tr>
+
+
+<tr><td class=3D"bar"><font size=3D1px color=3D"white"><b><input id=3D"f=
+ilter_7_10" value=3D"=D0=EE=E3=E0=F7=E5=E2" type=3D"checkbox" >=D0=EE=E3=
+=E0=F7=E5=E2</b></font></td></tr>
+
+
+<tr><td class=3D"bar"><font size=3D1px color=3D"white"><b><input id=3D"f=
+ilter_7_11" value=3D"=D0=EE=E3=E0=F7=B8=E2" type=3D"checkbox" >=D0=EE=E3=
+=E0=F7=B8=E2</b></font></td></tr>
+
+
+<tr><td class=3D"bar"><font size=3D1px color=3D"white"><b><input id=3D"f=
+ilter_7_12" value=3D"=D1=E2=E5=F2=EB=EE=E3=EE=F0=F1=EA" type=3D"checkbox=
+" >=D1=E2=E5=F2=EB=EE=E3=EE=F0=F1=EA</b></font></td></tr>
+
+
+<tr><td class=3D"bar"><a class=3D"menu" href=3D"javascript:invert(7);">I=
+nvert</a></td></tr>
+</table></td><td></td>
+
+<td class=3D"bar"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" bgcolor=3D"#990000">
+<tr><td class=3D"bar"><font size=3D1px color=3D"white"><b>=D8=EA=EE=EB=E0=
+</b></font></td></tr>
+
+<tr><td class=3D"bar"><font size=3D1px color=3D"white"><b><input id=3D"f=
+ilter_4_0" value=3D"" type=3D"checkbox" ></b></font></td></tr>
+
+
+<tr><td class=3D"bar"><font size=3D1px color=3D"white"><b><input id=3D"f=
+ilter_4_1" value=3D"=C1=C3=D3" type=3D"checkbox" >=C1=C3=D3</b></font></=
+td></tr>
+
+
+<tr><td class=3D"bar"><font size=3D1px color=3D"white"><b><input id=3D"f=
+ilter_4_2" value=3D"=C3=C3=CB" type=3D"checkbox" >=C3=C3=CB</b></font></=
+td></tr>
+
+
+<tr><td class=3D"bar"><font size=3D1px color=3D"white"><b><input id=3D"f=
+ilter_4_3" value=3D"=C3=C3=CB =B91" type=3D"checkbox" >=C3=C3=CB =B91</b=
+></font></td></tr>
+
+
+<tr><td class=3D"bar"><font size=3D1px color=3D"white"><b><input id=3D"f=
+ilter_4_4" value=3D"=C3=C3=CE=CB" type=3D"checkbox" >=C3=C3=CE=CB</b></f=
+ont></td></tr>
+
+
+<tr><td class=3D"bar"><font size=3D1px color=3D"white"><b><input id=3D"f=
+ilter_4_5" value=3D"=C3=E8=EC=ED=E0=E7=E8=FF" type=3D"checkbox" >=C3=E8=EC=
+=ED=E0=E7=E8=FF</b></font></td></tr>
+
+
+<tr><td class=3D"bar"><font size=3D1px color=3D"white"><b><input id=3D"f=
+ilter_4_6" value=3D"=C3=E8=EC=ED=E0=E7=E8=FF =B91" type=3D"checkbox" >=C3=
+=E8=EC=ED=E0=E7=E8=FF =B91</b></font></td></tr>
+
+
+<tr><td class=3D"bar"><font size=3D1px color=3D"white"><b><input id=3D"f=
+ilter_4_7" value=3D"=C3=E8=EC=ED=E0=E7=E8=FF =B910" type=3D"checkbox" >=C3=
+=E8=EC=ED=E0=E7=E8=FF =B910</b></font></td></tr>
+
+
+<tr><td class=3D"bar"><font size=3D1px color=3D"white"><b><input id=3D"f=
+ilter_4_8" value=3D"=C3=E8=EC=ED=E0=E7=E8=FF =B92" type=3D"checkbox" >=C3=
+=E8=EC=ED=E0=E7=E8=FF =B92</b></font></td></tr>
+
+
+<tr><td class=3D"bar"><font size=3D1px color=3D"white"><b><input id=3D"f=
+ilter_4_9" value=3D"=C3=E8=EC=ED=E0=E7=E8=FF =B951" type=3D"checkbox" >=C3=
+=E8=EC=ED=E0=E7=E8=FF =B951</b></font></td></tr>
+
+
+<tr><td class=3D"bar"><font size=3D1px color=3D"white"><b><input id=3D"f=
+ilter_4_10" value=3D"=C3=E8=EC=ED=E0=E7=E8=FF =B956" type=3D"checkbox" >=
+=C3=E8=EC=ED=E0=E7=E8=FF =B956</b></font></td></tr>
+
+
+<tr><td class=3D"bar"><font size=3D1px color=3D"white"><b><input id=3D"f=
+ilter_4_11" value=3D"=C3=E8=EC=ED=E0=E7=E8=FF =B958" type=3D"checkbox" >=
+=C3=E8=EC=ED=E0=E7=E8=FF =B958</b></font></td></tr>
+
+
+<tr><td class=3D"bar"><font size=3D1px color=3D"white"><b><input id=3D"f=
+ilter_4_12" value=3D"=C3=E8=EC=ED=E0=E7=E8=FF =B97" type=3D"checkbox" >=C3=
+=E8=EC=ED=E0=E7=E8=FF =B97</b></font></td></tr>
+
+
+<tr><td class=3D"bar"><font size=3D1px color=3D"white"><b><input id=3D"f=
+ilter_4_13" value=3D"=C3=E8=EC=ED=E0=E7=E8=FF =B971" type=3D"checkbox" >=
+=C3=E8=EC=ED=E0=E7=E8=FF =B971</b></font></td></tr>
+
+
+<tr><td class=3D"bar"><font size=3D1px color=3D"white"><b><input id=3D"f=
+ilter_4_14" value=3D"=CA=EB=F3=E1 =FE=ED=FB=F5 =EF=EE=E6=E0=F0=ED=FB=F5 =
+(=CA=DE=CF)" type=3D"checkbox" >=CA=EB=F3=E1 =FE=ED=FB=F5 =EF=EE=E6=E0=F0=
+=ED=FB=F5 (=CA=DE=CF)</b></font></td></tr>
+
+
+<tr><td class=3D"bar"><font size=3D1px color=3D"white"><b><input id=3D"f=
+ilter_4_15" value=3D"=CB=E8=F6=E5=E9 =B91" type=3D"checkbox" >=CB=E8=F6=E5=
+=E9 =B91</b></font></td></tr>
+
+
+<tr><td class=3D"bar"><font size=3D1px color=3D"white"><b><input id=3D"f=
+ilter_4_16" value=3D"=CB=F3=EA=F1=EA=E0=FF =D1=CE=D8" type=3D"checkbox" =
+>=CB=F3=EA=F1=EA=E0=FF =D1=CE=D8</b></font></td></tr>
+
+
+<tr><td class=3D"bar"><font size=3D1px color=3D"white"><b><input id=3D"f=
+ilter_4_17" value=3D"=D1=D8 10" type=3D"checkbox" >=D1=D8 10</b></font><=
+/td></tr>
+
+
+<tr><td class=3D"bar"><font size=3D1px color=3D"white"><b><input id=3D"f=
+ilter_4_18" value=3D"=D1=D8 11" type=3D"checkbox" >=D1=D8 11</b></font><=
+/td></tr>
+
+
+<tr><td class=3D"bar"><font size=3D1px color=3D"white"><b><input id=3D"f=
+ilter_4_19" value=3D"=D1=D8 12" type=3D"checkbox" >=D1=D8 12</b></font><=
+/td></tr>
+
+
+<tr><td class=3D"bar"><font size=3D1px color=3D"white"><b><input id=3D"f=
+ilter_4_20" value=3D"=D1=D8 13" type=3D"checkbox" >=D1=D8 13</b></font><=
+/td></tr>
+
+
+<tr><td class=3D"bar"><font size=3D1px color=3D"white"><b><input id=3D"f=
+ilter_4_21" value=3D"=D1=D8 2" type=3D"checkbox" >=D1=D8 2</b></font></t=
+d></tr>
+
+
+<tr><td class=3D"bar"><font size=3D1px color=3D"white"><b><input id=3D"f=
+ilter_4_22" value=3D"=D1=D8 47" type=3D"checkbox" >=D1=D8 47</b></font><=
+/td></tr>
+
+
+<tr><td class=3D"bar"><font size=3D1px color=3D"white"><b><input id=3D"f=
+ilter_4_23" value=3D"=D1=D8 5" type=3D"checkbox" >=D1=D8 5</b></font></t=
+d></tr>
+
+
+<tr><td class=3D"bar"><font size=3D1px color=3D"white"><b><input id=3D"f=
+ilter_4_24" value=3D"=D1=D8 51" type=3D"checkbox" >=D1=D8 51</b></font><=
+/td></tr>
+
+
+<tr><td class=3D"bar"><font size=3D1px color=3D"white"><b><input id=3D"f=
+ilter_4_25" value=3D"=D1=D8 56" type=3D"checkbox" >=D1=D8 56</b></font><=
+/td></tr>
+
+
+<tr><td class=3D"bar"><font size=3D1px color=3D"white"><b><input id=3D"f=
+ilter_4_26" value=3D"=D1=D8 60" type=3D"checkbox" >=D1=D8 60</b></font><=
+/td></tr>
+
+
+<tr><td class=3D"bar"><font size=3D1px color=3D"white"><b><input id=3D"f=
+ilter_4_27" value=3D"=D1=D8 61" type=3D"checkbox" >=D1=D8 61</b></font><=
+/td></tr>
+
+
+<tr><td class=3D"bar"><font size=3D1px color=3D"white"><b><input id=3D"f=
+ilter_4_28" value=3D"=D1=D8 7" type=3D"checkbox" >=D1=D8 7</b></font></t=
+d></tr>
+
+
+<tr><td class=3D"bar"><font size=3D1px color=3D"white"><b><input id=3D"f=
+ilter_4_29" value=3D"=D1=D8 9" type=3D"checkbox" >=D1=D8 9</b></font></t=
+d></tr>
+
+
+<tr><td class=3D"bar"><a class=3D"menu" href=3D"javascript:invert(4);">I=
+nvert</a></td></tr>
+</table></td><td></td>
+
+<td class=3D"bar"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" bgcolor=3D"#990000">
+<tr><td class=3D"bar"><font size=3D1px color=3D"white"><b>=CA=EB=E0=F1=F1=
+</b></font></td></tr>
+
+<tr><td class=3D"bar"><font size=3D1px color=3D"white"><b><input id=3D"f=
+ilter_10_0" value=3D" 4" type=3D"checkbox" > 4</b></font></td></tr>
+
+
+<tr><td class=3D"bar"><font size=3D1px color=3D"white"><b><input id=3D"f=
+ilter_10_1" value=3D" 6" type=3D"checkbox" > 6</b></font></td></tr>
+
+
+<tr><td class=3D"bar"><font size=3D1px color=3D"white"><b><input id=3D"f=
+ilter_10_2" value=3D" 7" type=3D"checkbox" > 7</b></font></td></tr>
+
+
+<tr><td class=3D"bar"><font size=3D1px color=3D"white"><b><input id=3D"f=
+ilter_10_3" value=3D" 8" type=3D"checkbox" > 8</b></font></td></tr>
+
+
+<tr><td class=3D"bar"><font size=3D1px color=3D"white"><b><input id=3D"f=
+ilter_10_4" value=3D" 9" type=3D"checkbox" > 9</b></font></td></tr>
+
+
+<tr><td class=3D"bar"><font size=3D1px color=3D"white"><b><input id=3D"f=
+ilter_10_5" value=3D"10" type=3D"checkbox" >10</b></font></td></tr>
+
+
+<tr><td class=3D"bar"><font size=3D1px color=3D"white"><b><input id=3D"f=
+ilter_10_6" value=3D"11" type=3D"checkbox" >11</b></font></td></tr>
+
+
+<tr><td class=3D"bar"><font size=3D1px color=3D"white"><b><input id=3D"f=
+ilter_10_7" value=3D"1=EA" type=3D"checkbox" >1=EA</b></font></td></tr>
+
+
+<tr><td class=3D"bar"><font size=3D1px color=3D"white"><b><input id=3D"f=
+ilter_10_8" value=3D"=E4=F0" type=3D"checkbox" >=E4=F0</b></font></td></=
+tr>
+
+
+<tr><td class=3D"bar"><a class=3D"menu" href=3D"javascript:invert(10);">=
+Invert</a></td></tr>
+</table></td><td></td>
+
+
+
+
+
+
+
+</tr>
+<tr><td colspan=3D"9"></td></tr>
+<tr><td class=3D"bar" colspan=3D"9">
+        <table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0">
+                <tr><td class=3D"r" style=3D"background-color:#990000"><=
+font size=3D1px><b>
+
+               <a class=3D"menu" href=3D"?hd=3D2&hid=3D70481244&obid=3D7=
+0481244&pi=3D6&pi=3D7&pi=3D4&pi=3D10&u.c=3D662&lng=3Drus&u.a">Clear</a>&=
+nbsp;
+                <a class=3D"menu" href=3D"javascript:applyFilter();">App=
+ly</a>
+                </b></font></td></tr>
+        </table>
+</td></tr>
+</table>
+
+</div>
+
+
+</div>
+
+
+
+
+
+<table width=3D"20%">
+<tr><td class=3D"r">14 =C4=E5=EA=E0=E1=F0=FC 2009 - 16 =DF=ED=E2=E0=F0=FC=
+ 2010</td></tr>
+<tr><td>
+<table width=3D"20%" cellpadding=3D"2" cellspacing=3D"1" border=3D"0" bg=
+color=3D"silver" class=3Dnowrap>
+<tr><th rowspan=3D2><a href=3D"restable.jsp?hd=3D2&hid=3D70481244&obid=3D=
+70481244&pi=3D6&pi=3D7&pi=3D4&pi=3D10&u.c=3D662&lng=3Drus&u.a&SortId=3D1=
+&SortOrderId=3D1">=CC=E5=F1=F2=EE</a></th><th rowspan=3D2><a href=3D"res=
+table.jsp?hd=3D2&hid=3D70481244&obid=3D70481244&pi=3D6&pi=3D7&pi=3D4&pi=3D=
+10&u.c=3D662&lng=3Drus&u.a&SortId=3D2&SortOrderId=3D1">=C8=EC=FF</a></th=
+><th rowspan=3D2></th><th rowspan=3D2><a href=3D"restable.jsp?hd=3D2&hid=
+=3D70481244&obid=3D70481244&pi=3D6&pi=3D7&pi=3D4&pi=3D10&u.c=3D662&lng=3D=
+rus&u.a&SortId=3D3&SortOrderId=3D1">=D1=F2=F0=E0=ED=E0</a></th><th rowsp=
+an=3D2><a href=3D"restable.jsp?hd=3D2&hid=3D70481244&obid=3D70481244&pi=3D=
+6&pi=3D7&pi=3D4&pi=3D10&u.c=3D662&lng=3Drus&u.a&SortId=3D4&SortOrderId=3D=
+1">=C3=EE=F0=EE=E4</a></th><th rowspan=3D2><a href=3D"restable.jsp?hd=3D=
+2&hid=3D70481244&obid=3D70481244&pi=3D6&pi=3D7&pi=3D4&pi=3D10&u.c=3D662&=
+lng=3Drus&u.a&SortId=3D5&SortOrderId=3D1">=D8=EA=EE=EB=E0</a></th><th ro=
+wspan=3D2><a href=3D"restable.jsp?hd=3D2&hid=3D70481244&obid=3D70481244&=
+pi=3D6&pi=3D7&pi=3D4&pi=3D10&u.c=3D662&lng=3Drus&u.a&SortId=3D6&SortOrde=
+rId=3D1">=CA=EB=E0=F1=F1</a></th><th rowspan=3D2><a href=3D"restable.jsp=
+?hd=3D2&hid=3D70481244&obid=3D70481244&pi=3D6&pi=3D7&pi=3D4&pi=3D10&u.c=3D=
+662&lng=3Drus&u.a&SortId=3D7&SortOrderId=3D1">=D1=F3=EC=EC=E0</a></th><t=
+h colspan=3D4><a href=3D"restable.jsp?hd=3D1&hid=3D71048199&obid=3D71048=
+199&pi=3D6&pi=3D7&pi=3D4&pi=3D10&u.c=3D662&lng=3Drus&u.a">=C4=E5=ED=FC 1=
+</a></th></tr><tr><th><a href=3D"restable.jsp?hd=3D1&hid=3D71048200&obid=
+=3D71048200&pi=3D6&pi=3D7&pi=3D4&pi=3D10&u.c=3D662&lng=3Drus&u.a">1</a><=
+/th><th><a href=3D"restable.jsp?hd=3D1&hid=3D71048201&obid=3D71048201&pi=
+=3D6&pi=3D7&pi=3D4&pi=3D10&u.c=3D662&lng=3Drus&u.a">2</a></th><th><a hre=
+f=3D"restable.jsp?hd=3D1&hid=3D71048202&obid=3D71048202&pi=3D6&pi=3D7&pi=
+=3D4&pi=3D10&u.c=3D662&lng=3Drus&u.a">3</a></th><th><a href=3D"restable.=
+jsp?hd=3D1&hid=3D71048203&obid=3D71048203&pi=3D6&pi=3D7&pi=3D4&pi=3D10&u=
+.c=3D662&lng=3Drus&u.a">4</a></th></tr><tr><td nowrap width=3D"1%">1 - 7=
+</td><td nowrap class=3D"l"><a href=3D"report.asp?id=3D103474">=CA=EE=F0=
+=EE=F2=EA=E5=E2=E8=F7 =C3=E5=ED=ED=E0=E4=E8=E9</a> </td><td><sup><a href=
+=3D'/log.jsp?UserID=3D103474&CourseID=3D662'>Log</a></sup></td><td nowra=
+p class=3D"l">=C1=E5=EB=E0=F0=F3=F1=FC</td><td nowrap class=3D"l">=C3=EE=
+=EC=E5=EB=FC</td><td nowrap class=3D"l">=C3=E8=EC=ED=E0=E7=E8=FF =B956</=
+td><td nowrap class=3D"l"> 9=E0</td><td nowrap>400</td><td nowrap>100</t=
+d><td nowrap>100</td><td nowrap>100</td><td nowrap>100</td></tr><tr><td =
+nowrap width=3D"1%">1 - 7</td><td nowrap class=3D"l"><a href=3D"report.a=
+sp?id=3D107851">=C2=E5=F0=F3=F2=E8=ED =CF=E0=E2=E5=EB</a> </td><td><sup>=
+<a href=3D'/log.jsp?UserID=3D107851&CourseID=3D662'>Log</a></sup></td><t=
+d nowrap class=3D"l">=C1=E5=EB=E0=F0=F3=F1=FC</td><td nowrap class=3D"l"=
+>=C3=EE=EC=E5=EB=FC</td><td nowrap class=3D"l">=C3=C3=CB =B91</td><td no=
+wrap class=3D"l">11=E2</td><td nowrap>400</td><td nowrap>100</td><td now=
+rap>100</td><td nowrap>100</td><td nowrap>100</td></tr><tr><td nowrap wi=
+dth=3D"1%">1 - 7</td><td nowrap class=3D"l"><a href=3D"report.asp?id=3D1=
+09406">=C3=F0=E8=F6=EA=E5=E2=E8=F7 =C5=E2=E3=E5=ED=E8=E9</a> </td><td><s=
+up><a href=3D'/log.jsp?UserID=3D109406&CourseID=3D662'>Log</a></sup></td=
+><td nowrap class=3D"l">=C1=E5=EB=E0=F0=F3=F1=FC</td><td nowrap class=3D=
+"l">=CC=EE=E7=FB=F0=FC</td><td nowrap class=3D"l">=CA=EB=F3=E1 =FE=ED=FB=
+=F5 =EF=EE=E6=E0=F0=ED=FB=F5 (=CA=DE=CF)</td><td nowrap class=3D"l">11=E1=
+</td><td nowrap>400</td><td nowrap>100</td><td nowrap>100</td><td nowrap=
+>100</td><td nowrap>100</td></tr><tr><td nowrap width=3D"1%">1 - 7</td><=
+td nowrap class=3D"l"><a href=3D"report.asp?id=3D109510">=CC=E0=EB=FB=F8=
+=E5=E2 =C5=E3=EE=F0</a> </td><td><sup><a href=3D'/log.jsp?UserID=3D10951=
+0&CourseID=3D662'>Log</a></sup></td><td nowrap class=3D"l">=C1=E5=EB=E0=F0=
+=F3=F1=FC</td><td nowrap class=3D"l">=C3=EE=EC=E5=EB=FC</td><td nowrap c=
+lass=3D"l">=D1=D8 61</td><td nowrap class=3D"l">11=E0</td><td nowrap>400=
+</td><td nowrap>100</td><td nowrap>100</td><td nowrap>100</td><td nowrap=
+>100</td></tr><tr><td nowrap width=3D"1%">1 - 7</td><td nowrap class=3D"=
+l"><a href=3D"report.asp?id=3D113120">=C0=F1=F2=E0=F8=EA=E5=E2=E8=F7 =CC=
+=E8=F5=E0=E8=EB</a> </td><td><sup><a href=3D'/log.jsp?UserID=3D113120&Co=
+urseID=3D662'>Log</a></sup></td><td nowrap class=3D"l">=C1=E5=EB=E0=F0=F3=
+=F1=FC</td><td nowrap class=3D"l">=C3=EE=EC=E5=EB=FC</td><td nowrap clas=
+s=3D"l">=C3=C3=CE=CB</td><td nowrap class=3D"l">11=E0</td><td nowrap>400=
+</td><td nowrap>100</td><td nowrap>100</td><td nowrap>100</td><td nowrap=
+>100</td></tr><tr><td nowrap width=3D"1%">1 - 7</td><td nowrap class=3D"=
+l"><a href=3D"report.asp?id=3D114936">=C1=E0=F0=E4=E0=F8=E5=E2=E8=F7 =C0=
+=E4=E0=EC</a> </td><td><sup><a href=3D'/log.jsp?UserID=3D114936&CourseID=
+=3D662'>Log</a></sup></td><td nowrap class=3D"l">=C1=E5=EB=E0=F0=F3=F1=FC=
+</td><td nowrap class=3D"l">=CC=EE=E7=FB=F0=FC</td><td nowrap class=3D"l=
+">=CA=EB=F3=E1 =FE=ED=FB=F5 =EF=EE=E6=E0=F0=ED=FB=F5 (=CA=DE=CF)</td><td=
+ nowrap class=3D"l"> 9=E1</td><td nowrap>400</td><td nowrap>100</td><td =
+nowrap>100</td><td nowrap>100</td><td nowrap>100</td></tr><tr><td nowrap=
+ width=3D"1%">1 - 7</td><td nowrap class=3D"l"><a href=3D"report.asp?id=3D=
+114993">=CF=EE=E4=F2=E5=EB=EA=E8=ED =C2=EB=E0=E4=E8=F1=EB=E0=E2</a> </td=
+><td><sup><a href=3D'/log.jsp?UserID=3D114993&CourseID=3D662'>Log</a></s=
+up></td><td nowrap class=3D"l">=C1=E5=EB=E0=F0=F3=F1=FC</td><td nowrap c=
+lass=3D"l">=C3=EE=EC=E5=EB=FC</td><td nowrap class=3D"l">=D1=D8 47</td><=
+td nowrap class=3D"l"> 8=E0</td><td nowrap>400</td><td nowrap>100</td><t=
+d nowrap>100</td><td nowrap>100</td><td nowrap>100</td></tr><tr><td nowr=
+ap width=3D"1%">8 - 9</td><td nowrap class=3D"l"><a href=3D"report.asp?i=
+d=3D104993">=CA=E0=EC=E8=ED=F1=EA=E8=E9 =C0=EB=E5=EA=F1=E5=E9</a> </td><=
+td><sup><a href=3D'/log.jsp?UserID=3D104993&CourseID=3D662'>Log</a></sup=
+></td><td nowrap class=3D"l">=C1=E5=EB=E0=F0=F3=F1=FC</td><td nowrap cla=
+ss=3D"l">=C3=EE=EC=E5=EB=FC</td><td nowrap class=3D"l">=C3=C3=CB</td><td=
+ nowrap class=3D"l">11=E2</td><td nowrap>360</td><td nowrap>100</td><td =
+nowrap>100</td><td nowrap>100</td><td nowrap>60</td></tr><tr><td nowrap =
+width=3D"1%">8 - 9</td><td nowrap class=3D"l"><a href=3D"report.asp?id=3D=
+116812">=CC=E0=EB=E0=F8=E5=ED=EA=EE=E2 =C0=ED=F2=EE=ED</a> </td><td><sup=
+><a href=3D'/log.jsp?UserID=3D116812&CourseID=3D662'>Log</a></sup></td><=
+td nowrap class=3D"l">=C1=E5=EB=E0=F0=F3=F1=FC</td><td nowrap class=3D"l=
+">=CC=EE=E7=FB=F0=FC</td><td nowrap class=3D"l">=CA=EB=F3=E1 =FE=ED=FB=F5=
+ =EF=EE=E6=E0=F0=ED=FB=F5 (=CA=DE=CF)</td><td nowrap class=3D"l">10=E3</=
+td><td nowrap>360</td><td nowrap>100</td><td nowrap>100</td><td nowrap>1=
+00</td><td nowrap>60</td></tr><tr><td nowrap width=3D"1%">10 - 13</td><t=
+d nowrap class=3D"l"><a href=3D"report.asp?id=3D109491">=C0=F0=F2=FE=F5=EE=
+=E2 =C8=E2=E0=ED</a> </td><td><sup><a href=3D'/log.jsp?UserID=3D109491&C=
+ourseID=3D662'>Log</a></sup></td><td nowrap class=3D"l">=C1=E5=EB=E0=F0=F3=
+=F1=FC</td><td nowrap class=3D"l">=C3=EE=EC=E5=EB=FC</td><td nowrap clas=
+s=3D"l">=C3=C3=CB =B91</td><td nowrap class=3D"l">10=E1</td><td nowrap>3=
+55</td><td nowrap>100</td><td nowrap>100</td><td nowrap>100</td><td nowr=
+ap>55</td></tr><tr><td nowrap width=3D"1%">10 - 13</td><td nowrap class=3D=
+"l"><a href=3D"report.asp?id=3D110648">=CA=F3=EB=E8=EA =D1=E5=F0=E3=E5=E9=
+</a> </td><td><sup><a href=3D'/log.jsp?UserID=3D110648&CourseID=3D662'>L=
+og</a></sup></td><td nowrap class=3D"l">=C1=E5=EB=E0=F0=F3=F1=FC</td><td=
+ nowrap class=3D"l">=CC=EE=E7=FB=F0=FC</td><td nowrap class=3D"l">=CA=EB=
+=F3=E1 =FE=ED=FB=F5 =EF=EE=E6=E0=F0=ED=FB=F5 (=CA=DE=CF)</td><td nowrap =
+class=3D"l"> 8=E1</td><td nowrap>355</td><td nowrap>100</td><td nowrap>1=
+00</td><td nowrap>100</td><td nowrap>55</td></tr><tr><td nowrap width=3D=
+"1%">10 - 13</td><td nowrap class=3D"l"><a href=3D"report.asp?id=3D11463=
+4">=CD=E0=E4=B8=E6=EA=E8=ED =C0=ED=F2=EE=ED</a> </td><td><sup><a href=3D=
+'/log.jsp?UserID=3D114634&CourseID=3D662'>Log</a></sup></td><td nowrap c=
+lass=3D"l">=C1=E5=EB=E0=F0=F3=F1=FC</td><td nowrap class=3D"l">=CC=EE=E7=
+=FB=F0=FC</td><td nowrap class=3D"l">=CA=EB=F3=E1 =FE=ED=FB=F5 =EF=EE=E6=
+=E0=F0=ED=FB=F5 (=CA=DE=CF)</td><td nowrap class=3D"l">11=E0</td><td now=
+rap>355</td><td nowrap>100</td><td nowrap>100</td><td nowrap>100</td><td=
+ nowrap>55</td></tr><tr><td nowrap width=3D"1%">10 - 13</td><td nowrap c=
+lass=3D"l"><a href=3D"report.asp?id=3D114649">=D1=EE=E1=E8=ED =C2=EB=E0=E4=
+</a> </td><td><sup><a href=3D'/log.jsp?UserID=3D114649&CourseID=3D662'>L=
+og</a></sup></td><td nowrap class=3D"l">=C1=E5=EB=E0=F0=F3=F1=FC</td><td=
+ nowrap class=3D"l">=CC=EE=E7=FB=F0=FC</td><td nowrap class=3D"l">=CA=EB=
+=F3=E1 =FE=ED=FB=F5 =EF=EE=E6=E0=F0=ED=FB=F5 (=CA=DE=CF)</td><td nowrap =
+class=3D"l"> 9=E1</td><td nowrap>355</td><td nowrap>100</td><td nowrap>1=
+00</td><td nowrap>100</td><td nowrap>55</td></tr><tr><td nowrap width=3D=
+"1%">14 - 15</td><td nowrap class=3D"l"><a href=3D"report.asp?id=3D10886=
+6">=CA=EE=F1=F2=FE=EA=E5=E2=E8=F7 =C5=E2=E3=E5=ED=E8=E9</a> </td><td><su=
+p><a href=3D'/log.jsp?UserID=3D108866&CourseID=3D662'>Log</a></sup></td>=
+<td nowrap class=3D"l">=C1=E5=EB=E0=F0=F3=F1=FC</td><td nowrap class=3D"=
+l">=CC=EE=E7=FB=F0=FC</td><td nowrap class=3D"l">=CA=EB=F3=E1 =FE=ED=FB=F5=
+ =EF=EE=E6=E0=F0=ED=FB=F5 (=CA=DE=CF)</td><td nowrap class=3D"l">11=E3</=
+td><td nowrap>325</td><td nowrap>100</td><td nowrap>100</td><td nowrap>7=
+0</td><td nowrap>55</td></tr><tr><td nowrap width=3D"1%">14 - 15</td><td=
+ nowrap class=3D"l"><a href=3D"report.asp?id=3D115700">=CA=EE=ED=EE=EF=EB=
+=E8=F7 =C3=E5=EE=F0=E3=E8=E9</a> </td><td><sup><a href=3D'/log.jsp?UserI=
+D=3D115700&CourseID=3D662'>Log</a></sup></td><td nowrap class=3D"l">=C1=E5=
+=EB=E0=F0=F3=F1=FC</td><td nowrap class=3D"l">=CC=EE=E7=FB=F0=FC</td><td=
+ nowrap class=3D"l">=CA=EB=F3=E1 =FE=ED=FB=F5 =EF=EE=E6=E0=F0=ED=FB=F5 (=
+=CA=DE=CF)</td><td nowrap class=3D"l">10=E2</td><td nowrap>325</td><td n=
+owrap>100</td><td nowrap>100</td><td nowrap>70</td><td nowrap>55</td></t=
+r><tr><td nowrap width=3D"1%">16</td><td nowrap class=3D"l"><a href=3D"r=
+eport.asp?id=3D116188">=D7=E5=F0=ED=E5=E2=E8=F7 =C0=EB=E5=EA=F1=E5=E9</a=
+> </td><td><sup><a href=3D'/log.jsp?UserID=3D116188&CourseID=3D662'>Log<=
+/a></sup></td><td nowrap class=3D"l">=C1=E5=EB=E0=F0=F3=F1=FC</td><td no=
+wrap class=3D"l">=CC=E8=ED=F1=EA</td><td nowrap class=3D"l">=D1=D8 51</t=
+d><td nowrap class=3D"l">=E4=F0</td><td nowrap>320</td><td nowrap>100</t=
+d><td nowrap>100</td><td nowrap>100</td><td nowrap>20</td></tr><tr><td n=
+owrap width=3D"1%">17 - 19</td><td nowrap class=3D"l"><a href=3D"report.=
+asp?id=3D109701">=CD=E8=F7=E8=EF=EE=F0=F7=E8=EA =D1=E5=F0=E3=E5=E9</a> <=
+/td><td><sup><a href=3D'/log.jsp?UserID=3D109701&CourseID=3D662'>Log</a>=
+</sup></td><td nowrap class=3D"l">=C1=E5=EB=E0=F0=F3=F1=FC</td><td nowra=
+p class=3D"l">=C3=EE=EC=E5=EB=FC</td><td nowrap class=3D"l">=C3=E8=EC=ED=
+=E0=E7=E8=FF =B958</td><td nowrap class=3D"l"> 9=E1</td><td nowrap>310</=
+td><td nowrap>100</td><td nowrap>100</td><td nowrap>100</td><td nowrap>1=
+0</td></tr><tr><td nowrap width=3D"1%">17 - 19</td><td nowrap class=3D"l=
+"><a href=3D"report.asp?id=3D117113">=D2=E8=EC=EE=F5=E8=ED =C8=EB=FC=FF<=
+/a> </td><td><sup><a href=3D'/log.jsp?UserID=3D117113&CourseID=3D662'>Lo=
+g</a></sup></td><td nowrap class=3D"l">=C1=E5=EB=E0=F0=F3=F1=FC</td><td =
+nowrap class=3D"l">=C3=EE=EC=E5=EB=FC</td><td nowrap class=3D"l">=C3=C3=CE=
+=CB</td><td nowrap class=3D"l">10=E0</td><td nowrap>310</td><td nowrap>1=
+00</td><td nowrap>100</td><td nowrap>55</td><td nowrap>55</td></tr><tr><=
+td nowrap width=3D"1%">17 - 19</td><td nowrap class=3D"l"><a href=3D"rep=
+ort.asp?id=3D120606">=C2=E5=F0=E5=EC=E5=E5=E2 =CC=E0=EA=F1=E8=EC</a> </t=
+d><td><sup><a href=3D'/log.jsp?UserID=3D120606&CourseID=3D662'>Log</a></=
+sup></td><td nowrap class=3D"l">=C1=E5=EB=E0=F0=F3=F1=FC</td><td nowrap =
+class=3D"l">=CA=E0=EB=E8=ED=EA=EE=E2=E8=F7=E8</td><td nowrap class=3D"l"=
+>=CA=EB=F3=E1 =FE=ED=FB=F5 =EF=EE=E6=E0=F0=ED=FB=F5 (=CA=DE=CF)</td><td =
+nowrap class=3D"l">=E4=F0</td><td nowrap>310</td><td nowrap>100</td><td =
+nowrap>100</td><td nowrap>55</td><td nowrap>55</td></tr><tr><td nowrap w=
+idth=3D"1%">20</td><td nowrap class=3D"l"><a href=3D"report.asp?id=3D118=
+692">=D8=EC=E8=E4=F2 =C2=E0=F1=E8=EB=E8=E9</a> </td><td><sup><a href=3D'=
+/log.jsp?UserID=3D118692&CourseID=3D662'>Log</a></sup></td><td nowrap cl=
+ass=3D"l">=C1=E5=EB=E0=F0=F3=F1=FC</td><td nowrap class=3D"l">=CC=EE=E7=FB=
+=F0=FC</td><td nowrap class=3D"l">=CA=EB=F3=E1 =FE=ED=FB=F5 =EF=EE=E6=E0=
+=F0=ED=FB=F5 (=CA=DE=CF)</td><td nowrap class=3D"l">10=E2</td><td nowrap=
+>305</td><td nowrap>100</td><td nowrap>100</td><td nowrap>45</td><td now=
+rap>60</td></tr><tr><td nowrap width=3D"1%">21</td><td nowrap class=3D"l=
+"><a href=3D"report.asp?id=3D108608">=C3=F0=E8=E1=E0=ED=EE=E2 =C2=E0=E4=E8=
+=EC</a> </td><td><sup><a href=3D'/log.jsp?UserID=3D108608&CourseID=3D662=
+'>Log</a></sup></td><td nowrap class=3D"l">=C1=E5=EB=E0=F0=F3=F1=FC</td>=
+<td nowrap class=3D"l">=C3=EE=EC=E5=EB=FC</td><td nowrap class=3D"l">=C3=
+=E8=EC=ED=E0=E7=E8=FF =B910</td><td nowrap class=3D"l"> 8=E1</td><td now=
+rap>300</td><td nowrap>100</td><td nowrap>100</td><td nowrap>40</td><td =
+nowrap>60</td></tr><tr><td nowrap width=3D"1%">22</td><td nowrap class=3D=
+"l"><a href=3D"report.asp?id=3D115491">=C4=E5=EC=E8=E4=EA=EE =C4=EC=E8=F2=
+=F0=E8=E9</a> </td><td><sup><a href=3D'/log.jsp?UserID=3D115491&CourseID=
+=3D662'>Log</a></sup></td><td nowrap class=3D"l">=C1=E5=EB=E0=F0=F3=F1=FC=
+</td><td nowrap class=3D"l">=C3=EE=EC=E5=EB=FC</td><td nowrap class=3D"l=
+">=C3=E8=EC=ED=E0=E7=E8=FF =B971</td><td nowrap class=3D"l"> 7</td><td n=
+owrap>285</td><td nowrap>100</td><td nowrap>100</td><td nowrap>30</td><t=
+d nowrap>55</td></tr><tr><td nowrap width=3D"1%">23</td><td nowrap class=
+=3D"l"><a href=3D"report.asp?id=3D115822">=CA=E0=E7=E0=F7=E5=ED=EA=EE =C5=
+=E3=EE=F0</a> </td><td><sup><a href=3D'/log.jsp?UserID=3D115822&CourseID=
+=3D662'>Log</a></sup></td><td nowrap class=3D"l">=C1=E5=EB=E0=F0=F3=F1=FC=
+</td><td nowrap class=3D"l">=CC=EE=E7=FB=F0=FC</td><td nowrap class=3D"l=
+">=CA=EB=F3=E1 =FE=ED=FB=F5 =EF=EE=E6=E0=F0=ED=FB=F5 (=CA=DE=CF)</td><td=
+ nowrap class=3D"l"> 7=E0</td><td nowrap>275</td><td nowrap>100</td><td =
+nowrap>95</td><td nowrap>75</td><td nowrap>5</td></tr><tr><td nowrap wid=
+th=3D"1%">24</td><td nowrap class=3D"l"><a href=3D"report.asp?id=3D11493=
+7">=D8=E0=F0=EA=EE=E2 =C4=EC=E8=F2=F0=E8=E9</a> </td><td><sup><a href=3D=
+'/log.jsp?UserID=3D114937&CourseID=3D662'>Log</a></sup></td><td nowrap c=
+lass=3D"l">=C1=E5=EB=E0=F0=F3=F1=FC</td><td nowrap class=3D"l">=CC=EE=E7=
+=FB=F0=FC</td><td nowrap class=3D"l">=CA=EB=F3=E1 =FE=ED=FB=F5 =EF=EE=E6=
+=E0=F0=ED=FB=F5 (=CA=DE=CF)</td><td nowrap class=3D"l">11=E1</td><td now=
+rap>270</td><td nowrap>100</td><td nowrap>100</td><td nowrap>5</td><td n=
+owrap>65</td></tr><tr><td nowrap width=3D"1%">25</td><td nowrap class=3D=
+"l"><a href=3D"report.asp?id=3D117037">=C6=E5=EB=FF=E5=E2=E0 =C0=EB=E5=EA=
+=F1=E0=ED=E4=F0=E0</a> </td><td><sup><a href=3D'/log.jsp?UserID=3D117037=
+&CourseID=3D662'>Log</a></sup></td><td nowrap class=3D"l">=C1=E5=EB=E0=F0=
+=F3=F1=FC</td><td nowrap class=3D"l">=C3=EE=EC=E5=EB=FC</td><td nowrap c=
+lass=3D"l">=C3=C3=CE=CB</td><td nowrap class=3D"l">10=E0</td><td nowrap>=
+260</td><td nowrap>100</td><td nowrap>100</td><td nowrap>5</td><td nowra=
+p>55</td></tr><tr><td nowrap width=3D"1%">26</td><td nowrap class=3D"l">=
+<a href=3D"report.asp?id=3D117759">=C4=F0=FF=EF=EA=EE =C0=EB=E5=EA=F1=E0=
+=ED=E4=F0</a> </td><td><sup><a href=3D'/log.jsp?UserID=3D117759&CourseID=
+=3D662'>Log</a></sup></td><td nowrap class=3D"l">=C1=E5=EB=E0=F0=F3=F1=FC=
+</td><td nowrap class=3D"l">=CC=EE=E7=FB=F0=FC</td><td nowrap class=3D"l=
+">=CA=EB=F3=E1 =FE=ED=FB=F5 =EF=EE=E6=E0=F0=ED=FB=F5 (=CA=DE=CF)</td><td=
+ nowrap class=3D"l"> 9=E0</td><td nowrap>250</td><td nowrap>100</td><td =
+nowrap>75</td><td nowrap>15</td><td nowrap>60</td></tr><tr><td nowrap wi=
+dth=3D"1%">27 - 28</td><td nowrap class=3D"l"><a href=3D"report.asp?id=3D=
+115952">=CA=E8=F0=E8=EA=EE=E2=E8=F7 =C8=E2=E0=ED</a> </td><td><sup><a hr=
+ef=3D'/log.jsp?UserID=3D115952&CourseID=3D662'>Log</a></sup></td><td now=
+rap class=3D"l">=C1=E5=EB=E0=F0=F3=F1=FC</td><td nowrap class=3D"l">=CC=EE=
+=E7=FB=F0=FC</td><td nowrap class=3D"l">=CA=EB=F3=E1 =FE=ED=FB=F5 =EF=EE=
+=E6=E0=F0=ED=FB=F5 (=CA=DE=CF)</td><td nowrap class=3D"l">10=E0</td><td =
+nowrap>245</td><td nowrap>100</td><td nowrap>100</td><td nowrap>0</td><t=
+d nowrap>45</td></tr><tr><td nowrap width=3D"1%">27 - 28</td><td nowrap =
+class=3D"l"><a href=3D"report.asp?id=3D119793">=DE=E4=E5=ED=EA=EE =C5=E2=
+=E3=E5=ED=E8=E9</a> </td><td><sup><a href=3D'/log.jsp?UserID=3D119793&Co=
+urseID=3D662'>Log</a></sup></td><td nowrap class=3D"l">=C1=E5=EB=E0=F0=F3=
+=F1=FC</td><td nowrap class=3D"l">=D1=E2=E5=F2=EB=EE=E3=EE=F0=F1=EA</td>=
+<td nowrap class=3D"l">=D1=D8 12</td><td nowrap class=3D"l">10=E1</td><t=
+d nowrap>245</td><td nowrap>100</td><td nowrap>100</td><td nowrap>40</td=
+><td nowrap>5</td></tr><tr><td nowrap width=3D"1%">29 - 31</td><td nowra=
+p class=3D"l"><a href=3D"report.asp?id=3D115510">=C4=E2=EE=F0=ED=E8=EA =C4=
+=EC=E8=F2=F0=E8=E9</a> </td><td><sup><a href=3D'/log.jsp?UserID=3D115510=
+&CourseID=3D662'>Log</a></sup></td><td nowrap class=3D"l">=C1=E5=EB=E0=F0=
+=F3=F1=FC</td><td nowrap class=3D"l">=D0=E5=F7=E8=F6=E0</td><td nowrap c=
+lass=3D"l">=D1=D8 7</td><td nowrap class=3D"l"> 9=E0</td><td nowrap>230<=
+/td><td nowrap>100</td><td nowrap>70</td><td nowrap>5</td><td nowrap>55<=
+/td></tr><tr><td nowrap width=3D"1%">29 - 31</td><td nowrap class=3D"l">=
+<a href=3D"report.asp?id=3D118396">=D1=F2=B8=EF=EA=E8=ED =C8=E3=EE=F0=FC=
+</a> </td><td><sup><a href=3D'/log.jsp?UserID=3D118396&CourseID=3D662'>L=
+og</a></sup></td><td nowrap class=3D"l">=C1=E5=EB=E0=F0=F3=F1=FC</td><td=
+ nowrap class=3D"l">=D1=E2=E5=F2=EB=EE=E3=EE=F0=F1=EA</td><td nowrap cla=
+ss=3D"l">=C3=E8=EC=ED=E0=E7=E8=FF =B97</td><td nowrap class=3D"l"> 7=E1<=
+/td><td nowrap>230</td><td nowrap>100</td><td nowrap>75</td><td nowrap>1=
+5</td><td nowrap>40</td></tr><tr><td nowrap width=3D"1%">29 - 31</td><td=
+ nowrap class=3D"l"><a href=3D"report.asp?id=3D118818">=C4=E0=E2=FB=E4=EE=
+=E2 =C0=F0=F2=E5=EC</a> </td><td><sup><a href=3D'/log.jsp?UserID=3D11881=
+8&CourseID=3D662'>Log</a></sup></td><td nowrap class=3D"l">=C1=E5=EB=E0=F0=
+=F3=F1=FC</td><td nowrap class=3D"l">=C3=EE=EC=E5=EB=FC</td><td nowrap c=
+lass=3D"l">=C3=C3=CE=CB</td><td nowrap class=3D"l">11=E0</td><td nowrap>=
+230</td><td nowrap>100</td><td nowrap>85</td><td nowrap>&nbsp;</td><td n=
+owrap>45</td></tr><tr><td nowrap width=3D"1%">32</td><td nowrap class=3D=
+"l"><a href=3D"report.asp?id=3D115086">=C2=E0=F1=E8=EB=FC=EA=EE=E2 =C0=EB=
+=E5=EA=F1=E5=E9</a> </td><td><sup><a href=3D'/log.jsp?UserID=3D115086&Co=
+urseID=3D662'>Log</a></sup></td><td nowrap class=3D"l">=C1=E5=EB=E0=F0=F3=
+=F1=FC</td><td nowrap class=3D"l">=C3=EE=EC=E5=EB=FC</td><td nowrap clas=
+s=3D"l">=D1=D8 60</td><td nowrap class=3D"l">10=E0</td><td nowrap>225</t=
+d><td nowrap>100</td><td nowrap>15</td><td nowrap>55</td><td nowrap>55</=
+td></tr><tr><td nowrap width=3D"1%">33</td><td nowrap class=3D"l"><a hre=
+f=3D"report.asp?id=3D117217">=CA=F3=EC=E0=EA=EE=E2 =C2=EB=E0=E4=E8=F1=EB=
+=E0=E2</a> </td><td><sup><a href=3D'/log.jsp?UserID=3D117217&CourseID=3D=
+662'>Log</a></sup></td><td nowrap class=3D"l">=C1=E5=EB=E0=F0=F3=F1=FC</=
+td><td nowrap class=3D"l">=D1=E2=E5=F2=EB=EE=E3=EE=F0=F1=EA</td><td nowr=
+ap class=3D"l">=D1=D8 9</td><td nowrap class=3D"l"> 9=E0</td><td nowrap>=
+220</td><td nowrap>100</td><td nowrap>100</td><td nowrap>15</td><td nowr=
+ap>5</td></tr><tr><td nowrap width=3D"1%">34</td><td nowrap class=3D"l">=
+<a href=3D"report.asp?id=3D118454">=CA=EE=E6=E5=E4=F3=E1 =C2=E0=E4=E8=EC=
+</a> </td><td><sup><a href=3D'/log.jsp?UserID=3D118454&CourseID=3D662'>L=
+og</a></sup></td><td nowrap class=3D"l">=C1=E5=EB=E0=F0=F3=F1=FC</td><td=
+ nowrap class=3D"l">=CC=EE=E7=FB=F0=FC</td><td nowrap class=3D"l">=CA=EB=
+=F3=E1 =FE=ED=FB=F5 =EF=EE=E6=E0=F0=ED=FB=F5 (=CA=DE=CF)</td><td nowrap =
+class=3D"l"> 9=E1</td><td nowrap>210</td><td nowrap>100</td><td nowrap>1=
+5</td><td nowrap>35</td><td nowrap>60</td></tr><tr><td nowrap width=3D"1=
+%">35</td><td nowrap class=3D"l"><a href=3D"report.asp?id=3D108147">=D8=E8=
+=F8=EE=E2 =CA=EE=EB=FF</a> </td><td><sup><a href=3D'/log.jsp?UserID=3D10=
+8147&CourseID=3D662'>Log</a></sup></td><td nowrap class=3D"l">=C1=E5=EB=E0=
+=F0=F3=F1=FC</td><td nowrap class=3D"l">=C3=EE=EC=E5=EB=FC</td><td nowra=
+p class=3D"l">=D1=D8 56</td><td nowrap class=3D"l"> 7=E2</td><td nowrap>=
+200</td><td nowrap>100</td><td nowrap>45</td><td nowrap>&nbsp;</td><td n=
+owrap>55</td></tr><tr><td nowrap width=3D"1%">36</td><td nowrap class=3D=
+"l"><a href=3D"report.asp?id=3D120420">=CA=EE=E7=E0=F7=E5=ED=EA=EE =C0=ED=
+=E4=F0=E5=E9</a> </td><td><sup><a href=3D'/log.jsp?UserID=3D120420&Cours=
+eID=3D662'>Log</a></sup></td><td nowrap class=3D"l">=C1=E5=EB=E0=F0=F3=F1=
+=FC</td><td nowrap class=3D"l">=C3=EE=EC=E5=EB=FC</td><td nowrap class=3D=
+"l">=CB=E8=F6=E5=E9 =B91</td><td nowrap class=3D"l">10=E1</td><td nowrap=
+>180</td><td nowrap>100</td><td nowrap>70</td><td nowrap>5</td><td nowra=
+p>5</td></tr><tr><td nowrap width=3D"1%">37</td><td nowrap class=3D"l"><=
+a href=3D"report.asp?id=3D115522">=D3=EA=F0=E0=E8=ED=F6=E5=E2 =C2=E8=F2=E0=
+=EB=E8=E9</a> </td><td><sup><a href=3D'/log.jsp?UserID=3D115522&CourseID=
+=3D662'>Log</a></sup></td><td nowrap class=3D"l">=C1=E5=EB=E0=F0=F3=F1=FC=
+</td><td nowrap class=3D"l">=D1=E2=E5=F2=EB=EE=E3=EE=F0=F1=EA</td><td no=
+wrap class=3D"l">=D1=D8 10</td><td nowrap class=3D"l">10=E0</td><td nowr=
+ap>175</td><td nowrap>100</td><td nowrap>5</td><td nowrap>15</td><td now=
+rap>55</td></tr><tr><td nowrap width=3D"1%">38</td><td nowrap class=3D"l=
+"><a href=3D"report.asp?id=3D115511">=CD=EE=E2=E8=EA=EE=E2 =C0=ED=F2=EE=ED=
+</a> </td><td><sup><a href=3D'/log.jsp?UserID=3D115511&CourseID=3D662'>L=
+og</a></sup></td><td nowrap class=3D"l">=C1=E5=EB=E0=F0=F3=F1=FC</td><td=
+ nowrap class=3D"l">=D0=E5=F7=E8=F6=E0</td><td nowrap class=3D"l">=CB=E8=
+=F6=E5=E9 =B91</td><td nowrap class=3D"l">10=E2</td><td nowrap>170</td><=
+td nowrap>100</td><td nowrap>15</td><td nowrap>&nbsp;</td><td nowrap>55<=
+/td></tr><tr><td nowrap width=3D"1%">39</td><td nowrap class=3D"l"><a hr=
+ef=3D"report.asp?id=3D120636">=D5=E0=F0=E8=ED=EE=E2=E0 =C0=ED=E0=F1=F2=E0=
+=F1=E8=FF</a> </td><td><sup><a href=3D'/log.jsp?UserID=3D120636&CourseID=
+=3D662'>Log</a></sup></td><td nowrap class=3D"l">=C1=E5=EB=E0=F0=F3=F1=FC=
+</td><td nowrap class=3D"l"> =D0=E5=F7=E8=F6=E0</td><td nowrap class=3D"=
+l">=C3=E8=EC=ED=E0=E7=E8=FF =B91</td><td nowrap class=3D"l">11=E1</td><t=
+d nowrap>165</td><td nowrap>90</td><td nowrap>5</td><td nowrap>15</td><t=
+d nowrap>55</td></tr><tr><td nowrap width=3D"1%">40</td><td nowrap class=
+=3D"l"><a href=3D"report.asp?id=3D117806">=CB=E8=EF=F1=EA=E8=E9 =C5=E3=EE=
+=F0</a> </td><td><sup><a href=3D'/log.jsp?UserID=3D117806&CourseID=3D662=
+'>Log</a></sup></td><td nowrap class=3D"l">=C1=E5=EB=E0=F0=F3=F1=FC</td>=
+<td nowrap class=3D"l">=CC=EE=E7=FB=F0=FC</td><td nowrap class=3D"l">=CA=
+=EB=F3=E1 =FE=ED=FB=F5 =EF=EE=E6=E0=F0=ED=FB=F5 (=CA=DE=CF)</td><td nowr=
+ap class=3D"l"> 8=E1</td><td nowrap>140</td><td nowrap>100</td><td nowra=
+p>20</td><td nowrap>15</td><td nowrap>5</td></tr><tr><td nowrap width=3D=
+"1%">41 - 42</td><td nowrap class=3D"l"><a href=3D"report.asp?id=3D11682=
+5">=D2=F3=F0=EE=E2=E5=F6 =CD=E8=EA=E8=F2=E0</a> </td><td><sup><a href=3D=
+'/log.jsp?UserID=3D116825&CourseID=3D662'>Log</a></sup></td><td nowrap c=
+lass=3D"l">=C1=E5=EB=E0=F0=F3=F1=FC</td><td nowrap class=3D"l">=D0=E5=EA=
+=F2=E0</td><td nowrap class=3D"l">=CB=F3=EA=F1=EA=E0=FF =D1=CE=D8</td><t=
+d nowrap class=3D"l"> 9=E1</td><td nowrap>120</td><td nowrap>100</td><td=
+ nowrap>5</td><td nowrap>10</td><td nowrap>5</td></tr><tr><td nowrap wid=
+th=3D"1%">41 - 42</td><td nowrap class=3D"l"><a href=3D"report.asp?id=3D=
+117510">=CA=E0=EF=F3=F1=F2=E8=ED =CF=E0=E2=E5=EB</a> </td><td><sup><a hr=
+ef=3D'/log.jsp?UserID=3D117510&CourseID=3D662'>Log</a></sup></td><td now=
+rap class=3D"l">=C1=E5=EB=E0=F0=F3=F1=FC</td><td nowrap class=3D"l">=C6=EB=
+=EE=E1=E8=ED</td><td nowrap class=3D"l">=D1=D8 13</td><td nowrap class=3D=
+"l">11=E2</td><td nowrap>120</td><td nowrap>100</td><td nowrap>10</td><t=
+d nowrap>&nbsp;</td><td nowrap>10</td></tr><tr><td nowrap width=3D"1%">4=
+3</td><td nowrap class=3D"l"><a href=3D"report.asp?id=3D114298">=CA=EE=F0=
+=EE=E1=E5=E9=ED=E8=EA=EE=E2 =D4=E5=E4=FF</a> </td><td><sup><a href=3D'/l=
+og.jsp?UserID=3D114298&CourseID=3D662'>Log</a></sup></td><td nowrap clas=
+s=3D"l">=C1=E5=EB=E0=F0=F3=F1=FC</td><td nowrap class=3D"l">=C3=EE=EC=E5=
+=EB=FC</td><td nowrap class=3D"l">=C3=E8=EC=ED=E0=E7=E8=FF =B951</td><td=
+ nowrap class=3D"l"> 4=E0</td><td nowrap>115</td><td nowrap>100</td><td =
+nowrap>5</td><td nowrap>5</td><td nowrap>5</td></tr><tr><td nowrap width=
+=3D"1%">44</td><td nowrap class=3D"l"><a href=3D"report.asp?id=3D120652"=
+>=D1=F2=E0=F0=EE=E2=EE=E9=F2=EE=E2 =C0=ED=E4=F0=E5=E9</a> </td><td><sup>=
+<a href=3D'/log.jsp?UserID=3D120652&CourseID=3D662'>Log</a></sup></td><t=
+d nowrap class=3D"l">=C1=E5=EB=E0=F0=F3=F1=FC</td><td nowrap class=3D"l"=
+>=CE=EA=F2=FF=E1=F0=FC=F1=EA=E8=E9</td><td nowrap class=3D"l">&nbsp;</td=
+><td nowrap class=3D"l">=E4=F0</td><td nowrap>110</td><td nowrap>100</td=
+><td nowrap>5</td><td nowrap>&nbsp;</td><td nowrap>5</td></tr><tr><td no=
+wrap width=3D"1%">45 - 46</td><td nowrap class=3D"l"><a href=3D"report.a=
+sp?id=3D115512">=D7=F3=E3=E0=E8=ED=EE=E2 =CA=E8=F0=E8=EB=EB</a> </td><td=
+><sup><a href=3D'/log.jsp?UserID=3D115512&CourseID=3D662'>Log</a></sup><=
+/td><td nowrap class=3D"l">=C1=E5=EB=E0=F0=F3=F1=FC</td><td nowrap class=
+=3D"l">=D1=E2=E5=F2=EB=EE=E3=EE=F0=F1=EA</td><td nowrap class=3D"l">=C3=E8=
+=EC=ED=E0=E7=E8=FF =B97</td><td nowrap class=3D"l">10=E2</td><td nowrap>=
+105</td><td nowrap>100</td><td nowrap>5</td><td nowrap>&nbsp;</td><td no=
+wrap>&nbsp;</td></tr><tr><td nowrap width=3D"1%">45 - 46</td><td nowrap =
+class=3D"l"><a href=3D"report.asp?id=3D118428">=CC=E8=F0=EE=ED=EE=E2 =C8=
+=E3=EE=F0=FC</a> </td><td><sup><a href=3D'/log.jsp?UserID=3D118428&Cours=
+eID=3D662'>Log</a></sup></td><td nowrap class=3D"l">=C1=E5=EB=E0=F0=F3=F1=
+=FC</td><td nowrap class=3D"l">=D0=EE=E3=E0=F7=B8=E2</td><td nowrap clas=
+s=3D"l">=C3=E8=EC=ED=E0=E7=E8=FF =B91</td><td nowrap class=3D"l"> 8=E0</=
+td><td nowrap>105</td><td nowrap>100</td><td nowrap>5</td><td nowrap>&nb=
+sp;</td><td nowrap>0</td></tr><tr><td nowrap width=3D"1%">47 - 53</td><t=
+d nowrap class=3D"l"><a href=3D"report.asp?id=3D115328">=D7=B8=F0=ED=FB=E9=
+ =C2=FF=F7=E5=F1=EB=E0=E2</a> </td><td><sup><a href=3D'/log.jsp?UserID=3D=
+115328&CourseID=3D662'>Log</a></sup></td><td nowrap class=3D"l">=C1=E5=EB=
+=E0=F0=F3=F1=FC</td><td nowrap class=3D"l">=CC=E8=ED=F1=EA</td><td nowra=
+p class=3D"l">=C1=C3=D3</td><td nowrap class=3D"l">1=EA=E4</td><td nowra=
+p>100</td><td nowrap>100</td><td nowrap>&nbsp;</td><td nowrap>&nbsp;</td=
+><td nowrap>&nbsp;</td></tr><tr><td nowrap width=3D"1%">47 - 53</td><td =
+nowrap class=3D"l"><a href=3D"report.asp?id=3D117033">=DF=EA=FC=FF=ED =C0=
+=EB=FC=E1=E8=ED=E0</a> </td><td><sup><a href=3D'/log.jsp?UserID=3D117033=
+&CourseID=3D662'>Log</a></sup></td><td nowrap class=3D"l">=C1=E5=EB=E0=F0=
+=F3=F1=FC</td><td nowrap class=3D"l">=C3=EE=EC=E5=EB=FC</td><td nowrap c=
+lass=3D"l">=C3=C3=CE=CB</td><td nowrap class=3D"l">10=E0</td><td nowrap>=
+100</td><td nowrap>100</td><td nowrap>0</td><td nowrap>0</td><td nowrap>=
+0</td></tr><tr><td nowrap width=3D"1%">47 - 53</td><td nowrap class=3D"l=
+"><a href=3D"report.asp?id=3D117511">=C7=E0=E1=E5=EB=EE=E2=E0 =C5=EA=E0=F2=
+=E5=F0=E8=ED=E0</a> </td><td><sup><a href=3D'/log.jsp?UserID=3D117511&Co=
+urseID=3D662'>Log</a></sup></td><td nowrap class=3D"l">=C1=E5=EB=E0=F0=F3=
+=F1=FC</td><td nowrap class=3D"l">=C6=EB=EE=E1=E8=ED</td><td nowrap clas=
+s=3D"l">=D1=D8 11</td><td nowrap class=3D"l"> 8=E0</td><td nowrap>100</t=
+d><td nowrap>100</td><td nowrap>0</td><td nowrap>0</td><td nowrap>0</td>=
+</tr><tr><td nowrap width=3D"1%">47 - 53</td><td nowrap class=3D"l"><a h=
+ref=3D"report.asp?id=3D118399">=CC=F3=F5=E0 =C2=E8=EA=F2=EE=F0</a> </td>=
+<td><sup><a href=3D'/log.jsp?UserID=3D118399&CourseID=3D662'>Log</a></su=
+p></td><td nowrap class=3D"l">=C1=E5=EB=E0=F0=F3=F1=FC</td><td nowrap cl=
+ass=3D"l">=D1=E2=E5=F2=EB=EE=E3=EE=F0=F1=EA</td><td nowrap class=3D"l">=D1=
+=D8 9</td><td nowrap class=3D"l"> 9=E1</td><td nowrap>100</td><td nowrap=
+>100</td><td nowrap>0</td><td nowrap>0</td><td nowrap>0</td></tr><tr><td=
+ nowrap width=3D"1%">47 - 53</td><td nowrap class=3D"l"><a href=3D"repor=
+t.asp?id=3D118445">=CA=EE=F0=EE=EB=B8=E2 =D1=E0=F8=E0</a> </td><td><sup>=
+<a href=3D'/log.jsp?UserID=3D118445&CourseID=3D662'>Log</a></sup></td><t=
+d nowrap class=3D"l">=C1=E5=EB=E0=F0=F3=F1=FC</td><td nowrap class=3D"l"=
+>=CF=EE=EB=EE=F6=EA</td><td nowrap class=3D"l">=C3=E8=EC=ED=E0=E7=E8=FF<=
+/td><td nowrap class=3D"l"> 6=E0</td><td nowrap>100</td><td nowrap>100</=
+td><td nowrap>&nbsp;</td><td nowrap>&nbsp;</td><td nowrap>&nbsp;</td></t=
+r><tr><td nowrap width=3D"1%">47 - 53</td><td nowrap class=3D"l"><a href=
+=3D"report.asp?id=3D118486">=CE=F1=E8=EF=EE=E2 =D1=F2=E0=F1</a> </td><td=
+><sup><a href=3D'/log.jsp?UserID=3D118486&CourseID=3D662'>Log</a></sup><=
+/td><td nowrap class=3D"l">=C1=E5=EB=E0=F0=F3=F1=FC</td><td nowrap class=
+=3D"l">=CF=EE=EB=EE=F6=EA</td><td nowrap class=3D"l">=C3=E8=EC=ED=E0=E7=E8=
+=FF =B92</td><td nowrap class=3D"l"> 6=E2</td><td nowrap>100</td><td now=
+rap>100</td><td nowrap>0</td><td nowrap>&nbsp;</td><td nowrap>&nbsp;</td=
+></tr><tr><td nowrap width=3D"1%">47 - 53</td><td nowrap class=3D"l"><a =
+href=3D"report.asp?id=3D120653">=C1=FB=F7=EA=EE=E2 =CE=EB=E5=E3</a> </td=
+><td><sup><a href=3D'/log.jsp?UserID=3D120653&CourseID=3D662'>Log</a></s=
+up></td><td nowrap class=3D"l">=C1=E5=EB=E0=F0=F3=F1=FC</td><td nowrap c=
+lass=3D"l">=D0=EE=E3=E0=F7=E5=E2</td><td nowrap class=3D"l">=D1=D8 2</td=
+><td nowrap class=3D"l"> 8</td><td nowrap>100</td><td nowrap>100</td><td=
+ nowrap>0</td><td nowrap>&nbsp;</td><td nowrap>&nbsp;</td></tr><tr><td n=
+owrap width=3D"1%">54</td><td nowrap class=3D"l"><a href=3D"report.asp?i=
+d=3D114376">=D2=E8=F5=EE=ED=EE=E2 =C1=EE=E3=E4=E0=ED</a> </td><td><sup><=
+a href=3D'/log.jsp?UserID=3D114376&CourseID=3D662'>Log</a></sup></td><td=
+ nowrap class=3D"l">=C1=E5=EB=E0=F0=F3=F1=FC</td><td nowrap class=3D"l">=
+=C3=EE=EC=E5=EB=FC</td><td nowrap class=3D"l">=C3=E8=EC=ED=E0=E7=E8=FF =B9=
+51</td><td nowrap class=3D"l"> 6=E2</td><td nowrap>20</td><td nowrap>5</=
+td><td nowrap>5</td><td nowrap>5</td><td nowrap>5</td></tr><tr><td nowra=
+p width=3D"1%">55</td><td nowrap class=3D"l"><a href=3D"report.asp?id=3D=
+120654">=CA=EE=E7=EB=EE=E2=E0 =CE=EA=F1=E0=ED=E0</a> </td><td><sup><a hr=
+ef=3D'/log.jsp?UserID=3D120654&CourseID=3D662'>Log</a></sup></td><td now=
+rap class=3D"l">=C1=E5=EB=E0=F0=F3=F1=FC</td><td nowrap class=3D"l">=D0=EE=
+=E3=E0=F7=E5=E2</td><td nowrap class=3D"l">=D1=D8 5</td><td nowrap class=
+=3D"l"> 8</td><td nowrap>5</td><td nowrap>5</td><td nowrap>0</td><td now=
+rap>&nbsp;</td><td nowrap>&nbsp;</td></tr></table></td></tr></table><fon=
+t color=3Dblack align=3Dcenter size=3D-2>=C2=F0=E5=EC=FF =E3=E5=ED=E5=F0=
+=E0=F6=E8=E8: 0.109 =F1=E5=EA.</font>
+
+
+</div>
+<form name =3D "formGroup" action  =3D "/groups/changeStaff.jsp" method =
+=3D "post">
+<INPUT TYPE=3D"hidden" NAME=3D"hid" VALUE=3D"70481244">
+<INPUT TYPE=3D"hidden" NAME=3D"backRef" VALUE=3D"">
+<INPUT TYPE=3D"hidden" NAME=3D"loadTemplateTitle" VALUE=3D"">
+<input type =3D hidden name =3D "userList" value =3D "103474|107851|1094=
+06|109510|113120|114936|114993|104993|116812|109491|110648|114634|114649=
+|108866|115700|116188|109701|117113|120606|118692|108608|115491|115822|1=
+14937|117037|117759|115952|119793|115510|118396|118818|115086|117217|118=
+454|108147|120420|115522|115511|120636|117806|116825|117510|114298|12065=
+2|115512|118428|115328|117033|117511|118399|118445|118486|120653|114376|=
+120654|">
+
+</form>
+
+
+</body>
+</html>
+
+------------Ct0vtYfq4SfH5OoD8hzozk
+Content-Disposition: inline; filename=dlbstyle.css
+Content-Type: text/css; charset=windows-1251; name=dlbstyle.css
+Content-Location: http://www.dl.gsu.by/dlbstyle.css
+Content-Transfer-Encoding: 8bit
+
+/* synchronize this with dlbstyle1024.css */
+
+.menu   {font-weight: bold; text-decoration: none; color: white;}
+.menu:visited   {font-weight: bold; text-decoration: none; color: white;}
+.bar    {background-color: #990000; padding: 2px; font-size:11px; font-weight:bold;}
+.hint   {text-decoration: none; color: navy;  font-size: 8pt; text-align: center;}
+A       {color:navy;}
+A:Hover {color:#f08080;}
+A:visited{color:navy;}
+A:active {color:red;}
+A.xxx       {color:yellow;}
+A.xxx:hover {color:red;}
+A.xxx:visited{color:yellow;}
+A.xxx:active {color:red;}
+body    {font-size:13px; font-family:Tahoma,Arial,Helvetica; background-color: white; color:black;}
+pre     {font-family: monospace;}
+td,th   {font-size: 11px; vertical-align: top;}
+h1      {color: #990000; font-size:13px; margin-top: 0px; margin-bottom: 0px; font-weight:bold; font-family:Tahoma,Arial,Helvetica;}
+h2      {color: black;   font-size:13px; margin-top: 0px; margin-bottom: 0px; font-weight:bold; font-family:Tahoma,Arial,Helvetica;}
+h3      {color: #990000; font-size:13px; margin-top: 0px; margin-bottom: 0px; font-weight:normal; font-family:Tahoma,Arial,Helvetica;}
+h5      {font-size:13px; font-family:Tahoma,Arial,Helvetica;}
+.g      {color: Gray; font-size:11px; font-weight: bold;}
+.g11    {color: Gray; font-size: 11px;  font-weight: normal;}
+.g7     {color: Gray; font-size:9px;  font-weight: normal;}
+.small  {font-size:9px;}
+.medium {font-size:11px;}
+.big    {font-size:13px;}
+a.b     {font-size:13px; font-weight:bold;}
+.p      {font-size:11px; font-weight:bold; background-color: #ffcccc;}
+body.r, body.math {background-color: #990000; color: #eeeeee;}
+body.e            {background-color: #dddddd; color: #000000;}
+body.xxx          {background-color: black; color: white;}
+form,
+input,
+select  {font-size: 11px;}
+.descr  {font-weight: bold; color: blue; font-style: italic; text-decoration: none;}
+
+td.analyz   {font-size:11px; vertical-align:top;background-color:#ffffff;margin:1em;}
+th.analyz   {font-size:11px; vertical-align:top;background-color:#ffffff;margin:1em;}
+
+table.news      {background-color:white;}
+table.news td   {font-size:11px; vertical-align:middle;background-color:#F8F8FF; border-style: solid; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-color: #c6c7cb;}
+table.news th   {font-size:11px; font-style:bond; vertical-align:middle;background-color:#F8F8FF; border-style: solid; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-color: #c6c7cb;}
+table.news table td   {font-size:11px; vertical-align:middle; border-style: none;}
+
+td.frame    {font-size:11px; vertical-align:top;background-color:white; border-style: solid; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-color: #c6c7cb;}
+
+.nowrap { white-space: nowrap;}
+table.nowrap td { white-space: nowrap;}
+
+/* Стили для математических задач */
+table.math {
+    width: 100%;
+    text-align: left; 
+    margin: 0px;
+}
+/* Cтиль по умолчанию */
+table.math td, table.math input, table.math select {
+    font-size: 13px; font-weight: bold; 
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    vertical-align: middle;
+}
+table.math td.hdiv {
+    background-color: #bb2222;
+    /*padding-top: 1ex;*/
+    border-top: solid 1ex #990000;
+}
+table.math td.capt {
+    text-align: right;
+    width: 5%;
+    white-space: nowrap;
+}
+/* Моноширинный жирный крупный шрифт. Задается через "STYLE mono" в начале task.in */
+.mono table.math td, .mono table.math input
+{
+    font-family: monospace;
+    font-weight: bold; 
+    font-size: 15px; 
+}
+.mono table.math td.text {
+    padding-left: 5px;
+}
+/*Photo.jsp Style*/
+span.photosendok{
+	color : green;
+	font-weight: bold; 
+}
+span.photosenderr{
+	color : red;
+	font-weight: bold; 
+}
+/* toolbar.jsp Style*/
+div.toolbar div.time{
+  font-weight: bold;
+  color: white;
+  padding-top:3px;   
+  font-size:13px;
+  text-align:right;
+}
+div.toolbar td.note{
+  text-align:center;
+  font-weight: bold;
+  color: white;  
+}
+div.toolbar span.noteup{
+  font-size:12px;  
+  position:relative; 
+  top:-2px;  
+}
+div.toolbar span.notedown{
+  font-size:13px;
+  position:relative;
+  top:-5px;    
+}
+div.toolbar  span.hidden {
+  display:none;
+}
+div.toolbar  span.shown {
+  display:inline;
+}
+div.toolbar span.end_note{  
+  color: white;
+  padding:3px,2,3px,0;  
+  margin-right:4px;   
+  font-size:13px;  
+  text-decoration:none;  
+  border-right:solid 1px white;
+}
+div.toolbar img.end_img{  
+  border-left:solid 1px white;
+}
+
+
+
+
+
+
+------------Ct0vtYfq4SfH5OoD8hzozk
+Content-Disposition: inline; filename=dlb.gif
+Content-Type: image/gif; name=dlb.gif
+Content-Location: http://www.dl.gsu.by/art/dlb.gif
+Content-Transfer-Encoding: Base64
+
+R0lGODlhSAIpAMQAAAAAABAQECAgIDAwMEBAQFBQUGBgYHx8fJkAAJ8QEKYgIKww
+MLNAQLlQUL9gYMt8fI+Pj5+fn6+vr7+/v8yAgNKPj9mfn9+vr+W/v8/Pz9/f3+zP
+z/Lf3+/v7/nv7////yH+FkdJRiBTbWFydFNhdmVyIFZlcjEuMWEALAAAAABIAikA
+AAX+4CeOZGmeaKqubOu+cCzPdG3feK7vfO//wKBwSCwaj8ikcslsOp/QqHRKrVpX
+mMd1y+16v+CwGOp5LBCMsXqtnkAOBoKcUDhIOiyJAGDAs5MdExolgRl/KRkEAASG
+VxiPkBs5Gw8IaIeYmU8SBQCen4sEe54FEykaoAaaRQegrgCNqx+jAAJUHg2WugkM
+DAoICw8cN5Vpsky6ycrLzM3Oz9DR0tPU0yYTr56xGp2kfiWtoMdCHRGKoAEHpsfY
+oOtRZRa5lyMc8xY2xeNL1f3J+zAQpDjniYCJcAAGxBqB0JONDgUWAiTRwZUEgO0+
+vZuCwZKWEg4s4aOhb+IRfyj+TbYQiKKhQRPdAAT4JgLVJ1U1FG1UKcLVTlm0bFnp
+iOAjCQ8JECTwQJIezyEo/blgyYXqC6vgQL0kFODT1hF6+NCMEe6nSp8TEy2SKIWo
+URIhEVxoauypkGUVMMSF5iDFXqtYSQQ+uVLGYBEuURgAFcFHBI12R6CNXMXtiUpF
+6VIOsgzDBwrSRDj4a+zfiMMfUBNRfdpwisQnMtZCocGshggHDkD42fAibdwHIgxS
+YaDxh3K5zZa4nVudCg0SckNgy2Iyi0DNlY/I8MbOWEIDDojIMOF7hwHDNbyZvqKD
+bxMRcH6I7v058N01LJvA/LbEhkcolHTCfxgwdYKBImD+IMkNHDyyIBidfRbaB39Z
+IoJpqelyoYWpncZhhixpCKJAIv5TooclfojhVa9plYJF16SzHEGfyPhBBgO4IoAc
+BZCglisEfHdcJwd00FBC1M2Xoys2+khjQUmiYF0KHSym43skhOWKeCdksEeRSwaw
+EY4ACPJkAUJ+oMEAXzG0yAcQdFUjliNoYOWOnqSTpgr6lTDPgyOUoYADD4TkwDAk
+CBioGQ88kNRIRy0giQVJFcVBow9UUMKlmJpwQQMXZKEUol4kQ4ELRDmz4YcdXtha
+iK8KFqurrlJla6sd3lprazGgBtsJNHIpgpGeCHujnBAch5AIT7oyAgSfoGllQmP+
+RTDKAUu6MsAJ0xKgQQe0JDvCY570AecndKowZZdyovfBBHIaW+UnYN60HEJwgCKU
+kcjKueUJEXTV5gTnEDAtOsNtJ2eQN9aoSAAv9FmPJX35p0ADCHKwQAKAKvrBBglU
+/MEFSpWAQVIYWKDAL5Z4YMEZWLkMcwkVLDWCBQho+oWpqC5jwl+yrmphiCYGnSuv
+R9Oa9NLK4MraCb66iEJMb954gL/GLmlsOMMSDIo6EzSC0EzvgiLuvEyaIhsAxo0w
+7QB+SEDvuNGS0E0ACa+wbgkZyCnAN9B68h5BLzXUyI/ZfGLOK+4embB6tGx19SvJ
+akALHxTRkvDBnmhnskf+m56B8aa8mLABMIk69XECChxlyYMXVFqBFh6EZAzJg+Hu
+en8M9LdFhKBFRTSruvKKFWCzOq38rszjqvTTJkTtVYs1nvvvePaSkCMJDW0kG5ey
+vbTmK20fLN987pBwbU3+boTQ+eqmn0K2xmYkVPeIfS2CBNl+cjkAEPgfABJ2OeNk
+4BVboVq56OY/7n1iWyPIiJg89zkENEAEHsgC6yBFAgYggFQkOAOkBOSBX+jMQ54J
+lCVsJoIHEeUEL7xZZkhggRSWShmeCV5UhFYCDhWNhyBa1fOSpyvT+DBFrJoK9Qqy
+RIe4p3/Caoi4atK2D+DPTZ74mwjC5yNXxIJcTBz/AS0gyEDfHKwEBBFKdeQHMDZa
+ERSDyFaP8je3Z+nrA9MSSuDyRIKDCWsCVPsKuMxWJ2eNgH4UAUWUYNiMBDTAhiPo
+SF1KcAaRCQhnLERhDxEgsgoy0ioeEwPwJsQMIG7GaAeR2gmOBBb90dF/VSQBjdzn
+CYVEUJU9Ecctp4e9OvZRix/wFwCagy1DrhEyU0tFcxRoiiWhCYvFIgEX3yiARkzz
+lcNMJC9HMEsSGPMDrpSML1sgsQ3UDA0I+kAuGAAJSDzAg04RUM04uCFIZsh3CUpi
+Pq1SAZGwYZTREAE8dVEaEZ0SaancZkI/sctoigCM+orlB7opTYlAtE3fvGZv/lSw
+tsQlxAV7E6dHazSIQOQNj+Esm0KlicuGGAucK6VoLhkq0mx6c5wskBgGz7AABFlC
+Ab0IqlB7N4JQRg8B9rSEPSOpzw/EUAQc0EUDQAghHEooGp0EyYoOKr0wcuuOWwxn
+B4QJCrjJ0o0mQNtKM6pKqnlujx+9QUgbBoo9oQBxDg3rShtaNWy+FJcTdeM3aSEv
+QkYMdCaIqgWhaom5tMCoJCBKUpGKgqdGNomYUcoD0nnDZORQeKVEaAoOA72joqC0
+xStMSwB71rrpNa/oS5xZmYVW7gUgAIEsAVu3KdNVslYGc10bDOaFp3FeswTHdalu
+YypYXb6SjLH1xEmx/oDYnynVqdd9rOo21QCWTXap+/ykCSilC0mFAaCgXVFpdwCr
+6ClxBl3tqwlcMcXvlUACZP3EFHsLlj0o5Lgwpelr+0qjdDlwr8Ct7YAB8ILJoUm5
+fG1ThA8M2wDLN7DInKlDRjDWDBMEfjmtbglwlhnJugCyD1AAPrKrSfGawLKB2ksC
+qPo7q+pwGQW1Bg9JJMRWGdGUW22vYJCIoh9i6MhNlPCCE2bf5XDOq/xFKbVU6lUN
+M3jCtMVpVhooVwVTWbrXWRJOIDxgJX/5K2TWcJt6+81j1XIQe5ztYWf4YkukgSj0
+TEEoN7AABxiIxfWsbFNhTAIOwHOSVbGxMy7o/4FqGE2fPFaekCPtvA0pbYjNW96t
+ihdfM5uPpVoeD+cgluXOlSAm1gTsbr3aEOhewxV2bcHeOpAsGKlgkLXwQ5oBjGW/
+LrfKGDZ1Ta9MgvEx6aU9o3MF09BoZavAY7E7YYa+K+jBEFqrH9yZMk51umbgA3c6
+xvSOhzjp5Rmv0rYyYrkljbROn8Amecpbk+cDvwlkS429lVste21lUHtV35+YLodd
+IdEY7G0xH+gfiLds0zca97dnpnDD1YzG5gp4WNYCQB10Q0E+iZiGFBPBL1qn3Ul2
+5IJDpraLR8wqx7qOsp3VBclJnIwEnOoDA52QuDdN7p5f2tztPq2miShaif4rmWqx
+nHcrTgrvrfS2WwwE9qrlK0wzlzrXNljXAbd1pEUS1m0p5XWZJf5X5mbYwsSej79i
+nWx8UsgSOosLePfjFKQgAFDT3uTcu433D2AGlSPw4NypwIyKZbCdI6hQQIfsPCPP
+qogGRVGlM7RjFUUa8ipqohrtqLhX+1IRIF5S22gkLkPQyA80MkjCpo5mV8CP1gsG
+8dVAitYcGaTDDxwLfg1R1mEJUzzDEXvEoTlxC6/Z4hsWAdUCQIDmRKDjn8Sn3VnY
+7Z4eyIaXTCKJVQ41BOR5ZqdZqgeriuMLcJYDKpMKYZ6Q2hJwLmHEylPBITpHDEuk
+K8B0eC0loIhgJ/7kAARAVldjCPDmCd8AcLOhPa4QEccRMGrEOQPgG2qBbO92PUOy
+QB8AUTIRAXigAa0AQQt4AAIgTOlAagi4eSQAUdDVEOdTgKQmRqDwHhUBR3WSX+hg
+LnOGaCIwD9KGGVn1AR6wACMUT5ZAKiXUWB9AKoDmJ9uFASzjU77jSOSXXtBQBJGn
+BJE3GBDwZOkAB/5iANMVHWRVAMliJbZ0HIsRAAuhgQsEV1mUARCYASK4gHcwOVpR
+JMPSPzoSC+cxUjiICAWQXwbghb70ZGU1HAq0CLhGL3JIVgQwRfNhh4woh69gANMx
+h2V1AB74JAOQLBCghwJwAIczUrXEdkmIAf8wkzORBU9ZFYSWIIRM4TKDEigeNGMi
+QGIMwBQXsAAX8Au8uAD75HbYpYotxIt2lkIIoADpVAl9dwVUqHMHNXnBxHxzIApa
+URxp0glsUo1dcSNjFICLMF16yCV9eBMdqBW0JhPVGIAE8Bg7wo2wwGGJKBYLpS8G
+ZgLQQo3rSD4pmF9N4mZ5wiUQJR6L8Y5zoA0j0AkGKQfDtBjbeJABAC0LaY2Bs457
+gAr6KAd7MEVumA0UaAK5sAC9cAa84Auv6HJHMQ/KYBSZFXJ2R1DDgBnm5UG9oAC8
+0IwkxgsLICkdkQCbJQL9xADDUAYJgJJd8IxImZRK+YxMEB1zIIooYCTocgABeVMl
+BrMR/FcABVcDmziVAlcTEFAAcmAHPFAbP1EOcWAwHGgCGSCWmsg9V3kIOBKII2V1
+LNAgj8BZpvNODNAAFUBjJ8ABDsAADsBBFWABenmXg8kAFRCLfrYpfOmXiRmNlFmZ
+lkkZAUM29AGAr3CZnvmZoBmam0EuSqZWriaaqJmaqrmaXLAkVhdqrBmbsjmbtOkD
+S4KCAycTX1mbvNmbvvmbFAaJWLSVwFmcxnmcokkQeFgTrRAAxImc0Bmd0mkXkigH
+Yrab05md2rmdmIAcTykc3Bme4jme5Fme5nme6Jme6nkEAAA7
+
+------------Ct0vtYfq4SfH5OoD8hzozk
+Content-Disposition: inline; filename=red-dot.gif
+Content-Type: image/gif; name=red-dot.gif
+Content-Location: http://www.dl.gsu.by/art/red-dot.gif
+Content-Transfer-Encoding: Base64
+
+R0lGODlhAQABAIAAAOSCggAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==
+
+------------Ct0vtYfq4SfH5OoD8hzozk
+Content-Disposition: inline; filename=cnt1.gif
+Content-Type: image/gif; name=cnt1.gif
+Content-Location: http://www.dl.gsu.by/art/cnt1.gif
+Content-Transfer-Encoding: Base64
+
+R0lGODlhDQANAIABAH9mAP/MACH5BAEAAAEALAAAAAANAA0AAAIchI8Yyx3mImzA
+TVZpxjaneS2bOD6ddUaaqn1fAQA7
+
+------------Ct0vtYfq4SfH5OoD8hzozk--

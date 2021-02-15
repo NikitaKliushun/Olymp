@@ -1,0 +1,820 @@
+
+D:\minsk-2011\train060111\jury>for / %i in (D:\Disk_Z\*.) do (
+ 
+  
+ for / %j in (%i\?????t4) do (
+md 4\contestants\%~nj  
+ copy %i\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o50101\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o50101\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o50102\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o50102\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+md 4\contestants\D6P19T4  
+ copy D:\Disk_Z\o50102\D:\Disk_Z\o50102\D6P19T4\*.* 4\contestants\D6P19T4 
+) 
+D:\Disk_Z\o50102\D:\Disk_Z\o50102\D6P19T4\*.* 
+Скопировано файлов:         0.
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o50103\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o50103\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+md 4\contestants\D6P10T4  
+ copy D:\Disk_Z\o50103\D:\Disk_Z\o50103\D6P10T4\*.* 4\contestants\D6P10T4 
+) 
+D:\Disk_Z\o50103\D:\Disk_Z\o50103\D6P10T4\*.* 
+Скопировано файлов:         0.
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o50104\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o50104\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o50105\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o50105\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o50106\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o50106\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o50107\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o50107\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o50108\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o50108\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+md 4\contestants\D6P27T4  
+ copy D:\Disk_Z\o50108\D:\Disk_Z\o50108\D6P27T4\*.* 4\contestants\D6P27T4 
+) 
+D:\Disk_Z\o50108\D:\Disk_Z\o50108\D6P27T4\*.* 
+Скопировано файлов:         0.
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o50109\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o50109\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o50110\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o50110\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o50111\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o50111\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+md 4\contestants\D6P57T4  
+ copy D:\Disk_Z\o50111\D:\Disk_Z\o50111\D6P57T4\*.* 4\contestants\D6P57T4 
+) 
+D:\Disk_Z\o50111\D:\Disk_Z\o50111\D6P57T4\*.* 
+Скопировано файлов:         0.
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o50112\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o50112\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+md 4\contestants\D6P33T4  
+ copy D:\Disk_Z\o50112\D:\Disk_Z\o50112\D6P33T4\*.* 4\contestants\D6P33T4 
+) 
+D:\Disk_Z\o50112\D:\Disk_Z\o50112\D6P33T4\*.* 
+Скопировано файлов:         0.
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o50113\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o50113\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+md 4\contestants\D6P47T4  
+ copy D:\Disk_Z\o50113\D:\Disk_Z\o50113\D6P47T4\*.* 4\contestants\D6P47T4 
+) 
+D:\Disk_Z\o50113\D:\Disk_Z\o50113\D6P47T4\*.* 
+Скопировано файлов:         0.
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o50114\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o50114\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o50115\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o50115\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o50116\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o50116\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o50401\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o50401\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+md 4\contestants\D6P32T4  
+ copy D:\Disk_Z\o50401\D:\Disk_Z\o50401\D6P32T4\*.* 4\contestants\D6P32T4 
+) 
+D:\Disk_Z\o50401\D:\Disk_Z\o50401\D6P32T4\*.* 
+Скопировано файлов:         0.
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o50402\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o50402\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+md 4\contestants\D6P20T4  
+ copy D:\Disk_Z\o50402\D:\Disk_Z\o50402\D6P20T4\*.* 4\contestants\D6P20T4 
+) 
+D:\Disk_Z\o50402\D:\Disk_Z\o50402\D6P20T4\*.* 
+Скопировано файлов:         0.
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o50403\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o50403\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o50404\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o50404\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+md 4\contestants\D6P23T4  
+ copy D:\Disk_Z\o50404\D:\Disk_Z\o50404\D6P23T4\*.* 4\contestants\D6P23T4 
+) 
+D:\Disk_Z\o50404\D:\Disk_Z\o50404\D6P23T4\*.* 
+Скопировано файлов:         0.
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o50405\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o50405\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o50406\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o50406\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o50407\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o50407\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+md 4\contestants\D6P50T4  
+ copy D:\Disk_Z\o50407\D:\Disk_Z\o50407\D6P50T4\*.* 4\contestants\D6P50T4 
+) 
+D:\Disk_Z\o50407\D:\Disk_Z\o50407\D6P50T4\*.* 
+Скопировано файлов:         0.
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o50408\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o50408\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o50409\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o50409\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o50410\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o50410\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o50411\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o50411\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o50412\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o50412\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o50413\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o50413\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o50414\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o50414\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o50415\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o50415\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o50416\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o50416\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o50501\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o50501\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+md 4\contestants\D6P53T4  
+ copy D:\Disk_Z\o50501\D:\Disk_Z\o50501\D6P53T4\*.* 4\contestants\D6P53T4 
+) 
+D:\Disk_Z\o50501\D:\Disk_Z\o50501\D6P53T4\*.* 
+Скопировано файлов:         0.
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o50502\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o50502\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o50503\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o50503\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o50504\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o50504\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o50505\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o50505\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o50506\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o50506\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o50507\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o50507\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o50508\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o50508\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+md 4\contestants\D6P24T4  
+ copy D:\Disk_Z\o50508\D:\Disk_Z\o50508\D6P24T4\*.* 4\contestants\D6P24T4 
+) 
+D:\Disk_Z\o50508\D:\Disk_Z\o50508\D6P24T4\*.* 
+Скопировано файлов:         0.
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o50509\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o50509\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o50510\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o50510\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o50511\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o50511\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o50512\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o50512\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o50513\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o50513\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o50514\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o50514\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+md 4\contestants\D6P72T4  
+ copy D:\Disk_Z\o50514\D:\Disk_Z\o50514\D6P72T4\*.* 4\contestants\D6P72T4 
+) 
+D:\Disk_Z\o50514\D:\Disk_Z\o50514\D6P72T4\*.* 
+Скопировано файлов:         0.
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o50515\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o50515\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o50516\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o50516\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o60401\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o60401\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o60402\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o60402\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o60403\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o60403\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o60404\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o60404\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o60405\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o60405\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o60406\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o60406\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o60407\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o60407\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o60408\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o60408\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o60409\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o60409\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o60410\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o60410\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o60411\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o60411\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o60412\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o60412\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o60413\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o60413\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o60414\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o60414\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o60415\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o60415\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o60416\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o60416\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o60501\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o60501\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o60502\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o60502\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o60503\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o60503\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o60504\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o60504\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o60505\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o60505\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o60506\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o60506\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o60507\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o60507\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o60508\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o60508\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o60509\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o60509\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o60510\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o60510\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o60511\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o60511\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o60512\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o60512\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o60513\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o60513\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o60514\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o60514\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o60515\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o60515\%j\*.* 4\contestants\%~nj 
+) 
+) 
+
+D:\minsk-2011\train060111\jury>(
+ 
+  
+ for / %j in (D:\Disk_Z\o60516\?????t4) do (
+md 4\contestants\%~nj  
+ copy D:\Disk_Z\o60516\%j\*.* 4\contestants\%~nj 
+) 
+) 

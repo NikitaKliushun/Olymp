@@ -1,0 +1,268 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0048)http://pco.iis.nsk.su/~dyatlov/alg/dyn/index.php -->
+<HTML><HEAD><TITLE>Олимпиадное программирование в Новосибирске</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1251"><LINK 
+href="dinamic_files/text.css" type=text/css rel=stylesheet>
+<META content="MSHTML 6.00.2800.1276" name=GENERATOR></HEAD>
+<BODY leftMargin=16 topMargin=16><A name=start>
+<H1 class=alghead>Динамическое программирование</H1></A>
+<P>Динамическое программирование - метод решения задач, при котором задача 
+разбивается на подзадачи, ответы к которым записываются в таблицу и используются 
+при решении задачи; для решения каждой из подзадач используется тот же метод. 
+Оно применимо только в том случае, когда подзадачи независимы друг от друга. Мы 
+разберем несколько примеров использования динамического программирования: </P><A 
+name=table>
+<H2 class=alg2head>Пример 1</H2></A>
+<P>Пусть у нас есть таблица A размера MxN, в клетках которой записаны целые 
+числа. Назовем путь по клеткам таблицы, в котором за клеткой (i,j) следует одна 
+из клеток (i+1,j), (i+1,j-1), (i+1,j+1), правильным. Пусть размер правильного 
+пути - сумма всех чисел, стоящих в клетках таблицы, принадлежащих этому пути. 
+Назовем правильный путь, начинающийся в одной из клеток (1,i), 1&lt;=i&lt;=N, и 
+кончающийся в одной из клеток (M,j), 1&lt;=j&lt;=N, полным. Требуется найти 
+полный путь минимального размера. </P>
+<P>Например, в таблице на рис.1 выделен искомый путь: </P>
+<CENTER>
+<TABLE cellSpacing=0 cellPadding=3 border=1>
+  <TBODY>
+  <TR>
+    <TD align=middle bgColor=yellow>1</TD>
+    <TD align=middle>7</TD>
+    <TD align=middle bgColor=yellow>5</TD>
+    <TD align=middle>7</TD>
+    <TD align=middle>10</TD></TR>
+  <TR>
+    <TD align=middle>3</TD>
+    <TD align=middle bgColor=yellow>6</TD>
+    <TD align=middle>9</TD>
+    <TD align=middle bgColor=yellow>1</TD>
+    <TD align=middle>9</TD></TR>
+  <TR>
+    <TD align=middle>2</TD>
+    <TD align=middle>5</TD>
+    <TD align=middle>10</TD>
+    <TD align=middle>2</TD>
+    <TD align=middle bgColor=yellow>5</TD></TR>
+  <TR>
+    <TD align=middle>4</TD>
+    <TD align=middle>8</TD>
+    <TD align=middle>9</TD>
+    <TD align=middle>3</TD>
+    <TD align=middle>2</TD></TR>
+  <CAPTION align=bottom>Рис. 1.</CAPTION></TABLE></CENTER>
+<P>Для решения задачи заведем таблицу B размера MxN, в которой B[i,j] равно 
+минимальному размеру правильного пути от одной из клеток (1,k), 1&lt;=k&lt;=n, 
+до клетки (i,j). Ясно, что B[1,j]=A[1,j]. Теперь, пусть мы уже вычислили B[i,j] 
+для всех i&lt;a. Найдем B[a,b] (1&lt;=b&lt;=N). Ясно, что в искомом пути клетке 
+(a,b) предшествовала одна из клеток (a-1,b), (a-1,b-1), (a-1,b+1). Если это 
+клетка (a-1,b), то минимальная длина пути из (1,k) в (a,b) равна 
+B[a-1,b]+A[a,b], если это клетка (a-1,b-1), то минимальная длина данного пути 
+равна B[a-1,b-1]+A[a,b], если это клетка (a-1,b+1), то минимальная длина данного 
+пути равна B[a-1,b+1]+A[a,b]; значит, длина минимального пути из (1,k) в (a,b) 
+равна наименьшему из этих трех чисел, т. е. 
+B[a,b]=min(B[a-1,b],B[a-1,b-1],B[a-1,b+1])+A[a,b]. После того, как мы заполним 
+таблицу B, минимальной длиной полного пути будет наименьшее из чисел B[m,i], где 
+1&lt;=i&lt;=n. </P>
+<P>Найдем теперь по таблице B полный путь минимальной длины. Описанный ниже 
+процесс называется <B>обратным ходом</B>. Пусть минимальная длина полного пути 
+равна B[m,a]. Значит, в искомом пути клетка (m,a) была последней. Рассмотрим 
+значения B[m-1,a], B[m-1,a-1],B[m-1,a+1]. Наименьшее из них стало основой для 
+вычисления B[m,a] в первой части алгоритма. Найдем его. Пусть это B[m-1,b], где 
+b - одно из чисел a,a-1,a+1. Ясно, что в искомом пути клетка (m-1,b) 
+предшествовала клетке (m,a). Повторяя описанную операцию для клекти (m-1,b) 
+вместо (m,a) и т. д., мы найдем весь искомый путь. </P>
+<P>Реализация алгоритма: </P>
+<TABLE class=algcode cellPadding=10>
+  <TBODY>
+  <TR>
+    <TD><PRE><SPAN class=highlight_keyword>const</SPAN>
+  MinN = 2;
+  MaxN = 100;
+  MaxM = MaxN;
+
+<SPAN class=highlight_keyword>var</SPAN>
+  M,N : Integer;
+  A : <SPAN class=highlight_keyword>array</SPAN> [1 .. MaxM,1 .. MaxN] <SPAN class=highlight_keyword>of</SPAN> Integer;
+  B : <SPAN class=highlight_keyword>array</SPAN> [1 .. MaxM,1 .. MaxN] <SPAN class=highlight_keyword>of</SPAN> Longint;
+  Sol : <SPAN class=highlight_keyword>array</SPAN> [1 .. MaxM] <SPAN class=highlight_keyword>of</SPAN> Integer;
+
+<SPAN class=highlight_keyword>function</SPAN> Min(X,Y : Longint) : Longint;
+<SPAN class=highlight_keyword>begin</SPAN>
+  <SPAN class=highlight_keyword>if</SPAN> X&lt;Y <SPAN class=highlight_keyword>then</SPAN>
+    Min:=X
+  <SPAN class=highlight_keyword>else</SPAN>   		
+    Min:=Y;
+<SPAN class=highlight_keyword>end</SPAN>;
+
+<SPAN class=highlight_keyword>procedure</SPAN> Din_Example_1;
+<SPAN class=highlight_keyword>var</SPAN>
+  I,J : Integer;
+<SPAN class=highlight_keyword>begin</SPAN>
+  <SPAN class=highlight_keyword>for</SPAN> I:=1 <SPAN class=highlight_keyword>to</SPAN> N <SPAN class=highlight_keyword>do</SPAN>
+    B[1,I] := A[1,I];
+  <SPAN class=highlight_keyword>for</SPAN> I:=2 <SPAN class=highlight_keyword>to</SPAN> M <SPAN class=highlight_keyword>do</SPAN>
+  <SPAN class=highlight_keyword>begin</SPAN>
+    B[I,1] := Min(B[I-1,1],B[I-1,2])+A[I,1];
+    <SPAN class=highlight_keyword>for</SPAN> J:=2 <SPAN class=highlight_keyword>to</SPAN> N-1 <SPAN class=highlight_keyword>do</SPAN>
+      B[I,J] := Min(B[I-1,J],Min(B[I-1,J-1],B[I-1,J+1]))+A[I,J];
+    B[I,N] := Min(B[I-1,N],B[I-1,N-1])+A[I,N];
+  <SPAN class=highlight_keyword>end</SPAN>;
+  Sol[M]:=1;
+  <SPAN class=highlight_keyword>for</SPAN> I:=1 <SPAN class=highlight_keyword>to</SPAN> N <SPAN class=highlight_keyword>do</SPAN>
+    <SPAN class=highlight_keyword>if</SPAN> B[M,I]&lt;B[M,Sol[M]] <SPAN class=highlight_keyword>then</SPAN> Sol[M] := I;
+  <SPAN class=highlight_keyword>for</SPAN> I:=M <SPAN class=highlight_keyword>downto</SPAN> 2 <SPAN class=highlight_keyword>do</SPAN>
+  <SPAN class=highlight_keyword>begin</SPAN>
+    Sol[I-1]:=Sol[I];
+    <SPAN class=highlight_keyword>if</SPAN> (Sol[I]&lt;&gt;1) <SPAN class=highlight_keyword>and</SPAN> (B[I-1,Sol[I]-1]&lt;B[I-1,Sol[I-1]]) <SPAN class=highlight_keyword>then</SPAN>
+      Sol[I-1] := Sol[I]-1;
+    <SPAN class=highlight_keyword>if</SPAN> (Sol[I]&lt;&gt;N) <SPAN class=highlight_keyword>and</SPAN> (B[I-1,Sol[I]+1]&lt;B[I-1,Sol[I-1]]) <SPAN class=highlight_keyword>then</SPAN>
+      Sol[I-1] := Sol[I]+1;
+  <SPAN class=highlight_keyword>end</SPAN>;
+  <SPAN class=highlight_keyword>for</SPAN> I:=1 <SPAN class=highlight_keyword>to</SPAN> M <SPAN class=highlight_keyword>do</SPAN>
+    Writeln(A[I,Sol[I]]);
+<SPAN class=highlight_keyword>end</SPAN>;
+
+</PRE></TD></TR></TBODY></TABLE>
+<P>Например, для таблицы с рис. 1 этот алгоритм выдаст путь 1,6,5,1,5, 
+являющийся искомым, а таблица B будет выглядеть так: </P>
+<CENTER>
+<TABLE cellSpacing=0 cellPadding=3 border=1>
+  <TBODY>
+  <TR>
+    <TD align=middle>1</TD>
+    <TD align=middle>8</TD>
+    <TD align=middle>12</TD>
+    <TD align=middle>19</TD>
+    <TD align=middle>23</TD></TR>
+  <TR>
+    <TD align=middle>3</TD>
+    <TD align=middle>7</TD>
+    <TD align=middle>16</TD>
+    <TD align=middle>13</TD>
+    <TD align=middle>22</TD></TR>
+  <TR>
+    <TD align=middle>2</TD>
+    <TD align=middle>7</TD>
+    <TD align=middle>17</TD>
+    <TD align=middle>18</TD>
+    <TD align=middle>18</TD></TR>
+  <TR>
+    <TD align=middle>4</TD>
+    <TD align=middle>10</TD>
+    <TD align=middle>16</TD>
+    <TD align=middle>19</TD>
+    <TD align=middle>20</TD></TR>
+  <CAPTION align=bottom>Рис. 2.</CAPTION></TABLE></CENTER><A name=luck>
+<H2 class=alg2head>Пример 2</H2></A>
+<P>Рассмотрим все последовательности десятичных цифр четной длины (будем 
+называть их номерами). Назовем номер счастливым, если сумма цифр в первой 
+половине этого номера совпадает с суммой цифр во второй половине. Требуется 
+определить количество счастливых номеров длины 2N. </P>
+<P>Зафиксируем число K - сумму цифр в первой половине нашего номера. Ясно, что 
+0&lt;=K&lt;=9N. Пусть у нас есть таблица A такая, что A[i,j] - количество 
+номеров длины i, сумма цифр которых равна j. Ясно, что для любого фиксированного 
+K количество счастливых номеров равно A[N,K]^2 (действительно, мы можем выбрать 
+левую и правую часть нашего номера независимо каждую из A[N,K] вариантов). 
+Значит, искомое число равно сумме чисел A[N,K]^2 при K от 0 до 9N, и для решения 
+задачи достаточно построить таблицу A. </P>
+<P>Ясно, что при j&gt;9*i или при j&lt;0 мы имеем A[i,j]=0. Заметим, что A[1,i] 
+равно 1 при 0&lt;=i&lt;=9 (есть только один номер длины 1, начинающийся на 
+данную цифру - сама цифра). Теперь, пусть мы вычислили значения A[i,j] для всех 
+i, меньших некоторого числа a, и нам требуется вычислить A[a,b]. Пусть T[a,b,c] 
+- количество номеров длины a с суммой цифр b, последняя цифра которых равна c. 
+Ясно, что T[a,b,c]=A[a-1,b-c], так как при отбрасывании последней цифры длина 
+номера уменьшится на единицу, а сумма его цифр - на c. Теперь, 
+A[a,b]=T[a,b,0]+T[a,b,1]+...+T[a,b,9], или 
+A[a,b]=A[a-1,b]+A[a-1,b-1]+...+A[a-1,b-9]. Таким образом мы вычислим таблицу A. 
+</P>
+<P>Реализация алгоритма: </P>
+<TABLE class=algcode cellPadding=10>
+  <TBODY>
+  <TR>
+    <TD><PRE><SPAN class=highlight_keyword>const</SPAN>
+  MaxN = 5;
+
+<SPAN class=highlight_keyword>var</SPAN>
+  A : <SPAN class=highlight_keyword>array</SPAN> [1 .. MaxN,0 .. 9*MaxN] <SPAN class=highlight_keyword>of</SPAN> Longint;
+
+<SPAN class=highlight_keyword>function</SPAN> Din_Example_2(N : Integer) : Longint;
+<SPAN class=highlight_keyword>var</SPAN>
+  I,J,K : Integer;
+  Res : Longint;
+<SPAN class=highlight_keyword>begin</SPAN>
+  fillchar(A,sizeof(A),0);
+  <SPAN class=highlight_keyword>for</SPAN> I:=0 <SPAN class=highlight_keyword>to</SPAN> 9 <SPAN class=highlight_keyword>do</SPAN>
+    A[1,I]:=1;
+  <SPAN class=highlight_keyword>for</SPAN> I:=2 <SPAN class=highlight_keyword>to</SPAN> N <SPAN class=highlight_keyword>do</SPAN>
+    <SPAN class=highlight_keyword>for</SPAN> J:=0 <SPAN class=highlight_keyword>to</SPAN> 9*I <SPAN class=highlight_keyword>do</SPAN>
+      <SPAN class=highlight_keyword>for</SPAN> K:=0 <SPAN class=highlight_keyword>to</SPAN> 9 <SPAN class=highlight_keyword>do</SPAN>
+        <SPAN class=highlight_keyword>if</SPAN> J&gt;=K <SPAN class=highlight_keyword>then</SPAN>
+          A[I,J] := A[I,J] + A[I-1,J-K];
+  Res := 0;
+  <SPAN class=highlight_keyword>for</SPAN> K:=0 <SPAN class=highlight_keyword>to</SPAN> N*9 <SPAN class=highlight_keyword>do</SPAN>
+    Res := Res+A[N,K]*A[N,K];
+  Din_Example_2 := Res;
+<SPAN class=highlight_keyword>end</SPAN>;
+</PRE></TD></TR></TBODY></TABLE>
+<P>Например, при N=3 данный алгоритм выдаст ответ 55252. </P>
+<P>Легко понять, что алгоритм требует O(N^2) времени и O(N^2) памяти. </P><A 
+name=racksack>
+<H2 class=alg2head>Пример 3</H2></A>
+<P>Пусть у вас есть N предметов, i-й из которых (1&lt;=i&lt;=N) имеет вес W[i] и 
+стоимость C[i]. Кроме того, у вас есть рюкзак, куда вы можете положить некоторые 
+из этих предметов, причем их суммарный вес не должен превышать некоторого числа 
+V. Все числа W[i] и число V - натуральные, и V не меньше каждого из W[i]. 
+Требуется положить в рюкзак вещи как можно большей суммарной стоимости. </P>
+<P>При небольшом V (V&lt;=1000000) задачу можно решить с помощью динамического 
+программирования. Пусть A - массив размера NxV, и A[i,j] - максимальная 
+суммарная стоимость набора вещей с номерами, не превышающими i, суммарной массы 
+j; если же такого набора не существует, то A[i,j]=-1. Ясно, что A[i,0]=0 
+(искомый набор-пустое множество). Пусть 1&lt;a&lt;=N, 1&lt;=b&lt;=V. Ясно, что 
+A[a,b]=max(A[a-1,b],A[a-1,b-W[a]]+C[a]), так как A[a-1,b] - искомая величина для 
+набора, не включающего a, а A[a-1,b-W[a]]+C[a] - для набора, включающего a. Ясно 
+также, что ответом будет максимальное из чисел A[N,i], 0&lt;=i&lt;=V. </P>
+<P>Реализация алгоритма (она несколько отличается от вышеописанного - массив A 
+одномерный, а не двумерный): </P>
+<TABLE class=algcode cellPadding=10>
+  <TBODY>
+  <TR>
+    <TD><PRE><SPAN class=highlight_keyword>const</SPAN>
+  MaxN = 100;
+  MaxV = 10000;
+
+<SPAN class=highlight_keyword>var</SPAN>
+  N : Integer;
+  V : Integer;
+  W : <SPAN class=highlight_keyword>array</SPAN> [1 .. MaxN] <SPAN class=highlight_keyword>of</SPAN> Integer;
+  C : <SPAN class=highlight_keyword>array</SPAN> [1 .. MaxN] <SPAN class=highlight_keyword>of</SPAN> Longint;
+  A : <SPAN class=highlight_keyword>array</SPAN> [0 .. MaxV] <SPAN class=highlight_keyword>of</SPAN> Longint;
+
+<SPAN class=highlight_keyword>function</SPAN> Din_Example_3 : Longint;
+<SPAN class=highlight_keyword>var</SPAN>
+  I,J : Integer;
+<SPAN class=highlight_keyword>begin</SPAN>
+  Fillchar(A,sizeof(A),255);
+  A[0] := 0;
+  <SPAN class=highlight_keyword>for</SPAN> I:=1 <SPAN class=highlight_keyword>to</SPAN> N <SPAN class=highlight_keyword>do</SPAN>
+    <SPAN class=highlight_keyword>for</SPAN> J:=V-W[I] <SPAN class=highlight_keyword>downto</SPAN> 0 <SPAN class=highlight_keyword>do</SPAN>
+      <SPAN class=highlight_keyword>if</SPAN> (A[J]&lt;&gt;-1) <SPAN class=highlight_keyword>and</SPAN> (A[J+W[I]]&lt;A[J]+C[I]) <SPAN class=highlight_keyword>then</SPAN>
+        A[J+W[I]] := A[J]+C[I];
+  J := 0;
+  <SPAN class=highlight_keyword>for</SPAN> I:=0 <SPAN class=highlight_keyword>to</SPAN> V <SPAN class=highlight_keyword>do</SPAN>
+    <SPAN class=highlight_keyword>if</SPAN> A[J]&lt;A[I] <SPAN class=highlight_keyword>then</SPAN>
+      J := I;
+  Din_Example_3 := A[J];
+<SPAN class=highlight_keyword>end</SPAN>;
+</PRE></TD></TR></TBODY></TABLE>
+<P>Например, если N=5, V=9, W=(1,5,6,8,10), C=(10,20,30,50,100), то агоритм 
+выдаст число 60 (суммарная стоимость набора из вещей 1 и 4). </P>
+<P>Алгоритм требует O(NV) времени и O(V) дополнительной памяти. </P><BR>
+<HR>
+
+<TABLE style="FONT-SIZE: 10pt" width="100%">
+  <TBODY>
+  <TR>
+    <TD align=left>© Semyon Dyatlov</TD>
+    <TD align=right><A href="mailto:dyatl@narod.ru">Mail 
+me</A></TD></TR></TBODY></TABLE><A style="FONT-SIZE: 8pt; COLOR: white" 
+href="http://pco.iis.nsk.su/~dyatlov/alg/dyn/fakes.php">Interesting things</A> 
+</BODY></HTML>

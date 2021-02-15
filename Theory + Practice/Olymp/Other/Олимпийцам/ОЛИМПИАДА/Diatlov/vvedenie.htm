@@ -1,0 +1,221 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0050)http://pco.iis.nsk.su/~dyatlov/alg/intro/index.php -->
+<HTML><HEAD><TITLE>Олимпиадное программирование в Новосибирске</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1251"><LINK 
+href="vvedenie_files/text.css" type=text/css rel=stylesheet>
+<META content="MSHTML 6.00.2800.1276" name=GENERATOR></HEAD>
+<BODY leftMargin=16 topMargin=16><A name=start>
+<H1 class=alghead>Введение</H1></A>
+<P>Здесь собран материал, который относится не к конкретным алгоритмам, а к 
+олимпиадному программированию в целом. </P><A name=io>
+<H2 class=alg2head>Ввод-вывод</H2></A>
+<P>Обычно написание решения олимпиадной задачи начинается с кодирования операций 
+с файлами. Мы поясним это на примере простой задачи - на входе даются два числа 
+A и B, надо вывести их сумму. </P>
+<P>Самое очевидное решение этой задачи выглядит так: </P>
+<TABLE class=algcode cellPadding=10>
+  <TBODY>
+  <TR>
+    <TD><PRE><SPAN class=highlight_keyword>program</SPAN> Sum;
+
+<SPAN class=highlight_keyword>var</SPAN>
+  A,B : Integer;
+
+<SPAN class=highlight_keyword>begin</SPAN>
+  Assign(Input,<SPAN class=highlight_string>'input.txt'</SPAN>);
+  Reset(Input);
+  Assign(Output,<SPAN class=highlight_string>'output.txt'</SPAN>);
+  Rewrite(Output);
+  Read(A,B);
+  Writeln(A+B);
+  Close(Input);
+  Close(Output);
+<SPAN class=highlight_keyword>end</SPAN>.
+</PRE></TD></TR></TBODY></TABLE>
+<P>Заметьте, что в этом примере не объявляются файловые переменные, так как 
+операции ввода/вывода проводятся через стандартные файлы <CODE>Input</CODE> и 
+<CODE>Output</CODE>, которые есть в любой реализации Паскаля. Это позволяет 
+также не указывать имя файловой переменной в вызовах функций <CODE>Read()</CODE> 
+и <CODE>Write()</CODE>. Кроме того, в Турбо Паскале последние две строки кода 
+можно опустить, так как в нем файлы <CODE>Input</CODE> и <CODE>Output</CODE> 
+автоматически закрываются в конце выполнения программы. (К сожалению, к Free 
+Pascal это не относится). Наконец, если вы хотите тестировать программу для 
+ввода с клавиатуры, то достаточно закомментировать строки, связанные с вызовами 
+<CODE>Assign()</CODE>, <CODE>Reset()</CODE>, <CODE>Rewrite()</CODE> и 
+<CODE>Close()</CODE>, и не требуется изменять инструкции чтения/записи. </P>
+<P>В реализации более сложных задач может потребоваться разделить процесс 
+выполнения на три: ввод, решение и вывод. В этом случае решение задачи "A+B" 
+будет выглядеть так: </P>
+<TABLE class=algcode cellPadding=10>
+  <TBODY>
+  <TR>
+    <TD><PRE><SPAN class=highlight_keyword>program</SPAN> Sum;
+
+<SPAN class=highlight_keyword>var</SPAN>
+  A,B,C : Integer;
+
+<SPAN class=highlight_keyword>procedure</SPAN> Inp;
+<SPAN class=highlight_keyword>begin</SPAN>
+  Assign(Input,<SPAN class=highlight_string>'input.txt'</SPAN>);
+  Reset(Input);
+  Assign(Output,<SPAN class=highlight_string>'output.txt'</SPAN>); 
+  Rewrite(Output);
+  Read(A,B);
+<SPAN class=highlight_keyword>end</SPAN>;
+
+<SPAN class=highlight_keyword>procedure</SPAN> Run;
+<SPAN class=highlight_keyword>begin</SPAN>
+  C := A+B;
+<SPAN class=highlight_keyword>end</SPAN>;
+
+<SPAN class=highlight_keyword>procedure</SPAN> Outp;
+<SPAN class=highlight_keyword>begin</SPAN>
+  Writeln(C);
+  Close(Input);
+  Close(Output);
+<SPAN class=highlight_keyword>end</SPAN>;
+
+<SPAN class=highlight_keyword>begin</SPAN>
+  Inp;
+  Run;
+  Outp;
+<SPAN class=highlight_keyword>end</SPAN>.
+</PRE></TD></TR></TBODY></TABLE>
+<P>Реализация таким способом решения задачи "A+B" может показаться странной, но 
+для более сложных задач она часто бывает удобнее. Кроме, того, она позволяет 
+использовать разные переменные цикла для чтения, решения и записи и не делать их 
+глобальными. </P><A name=O>
+<H2 class=alg2head>Символ O()</H2></A>
+<P><SPAN class=pref>Определение. </SPAN><SPAN class=description>Функция <SPAN 
+class=math>f(x)</SPAN> называется <SPAN class=term>O большим</SPAN> от функции 
+<SPAN class=math>g(x)</SPAN> (пишется <SPAN class=math>f(x)=O(g(x))</SPAN>), 
+если существуют числа <SPAN class=math>C</SPAN> и <SPAN 
+class=math>x<SUB>0</SUB></SPAN> такие, что для всех <SPAN 
+class=math>x&gt;x<SUB>0</SUB></SPAN> выполняется условие <SPAN 
+class=math>f(x)&lt;Cg(x)</SPAN>. </SPAN></P>
+<P>В олимпиадном программировании часто пишут, что время работы алгоритма равно 
+<SPAN class=math>O(f(x))</SPAN>, где <SPAN class=math>x</SPAN> - величина, 
+связанная с размером входных данных (например, размер входного массива). Это 
+фактически означает, что порядок времени работы алгоритма не превышает порядка 
+функции <SPAN class=math>f(x)</SPAN>. Использование такого способа оценки 
+времени работы алгоритмов связано с тем, что, в отличие от физического времени 
+работы, порядок времени работы алгоритма не зависит от компилятора, процессора и 
+операционной системы компьютера, на котором он выполняется. К сожалению, такая 
+оценка не всегда дает правильное представление о реальном времени работы 
+алгоритма; некоторые алгоритмы с плохой асимптотикой имеют маленькую константу и 
+работают быстрее алгоритмов с хорошей асимптотикой и большой константой 
+(например, в некоторых случаях алгоритм Эдмонда-Карпа, работающий за <SPAN 
+class=math>O(NM<SUP>2</SUP>)</SPAN>, ищет максимальный поток в сети быстрее 
+алгоритма "поднять и в начало" со временем работы <SPAN 
+class=math>O(N<SUP>3</SUP>)</SPAN>, а алгоритм Дейкстры в простейшей реализации 
+со временем работы <SPAN class=math>O(N<SUP>2</SUP>+M)</SPAN> работает, как 
+правило, быстрее реализации того же алгоритма с помощью фибоначчиевых куч, хотя 
+асимптотика такого варианта <SPAN class=math>O(N<SPAN class=func>log</SPAN> 
+N+M)</SPAN>). </P>
+<P>Известно, что 
+<UL>
+  <LI>если <SPAN class=math>f(x)=O(g(x))</SPAN> и <SPAN 
+  class=math>g(x)=O(h(x))</SPAN>, то <SPAN class=math>f(x)=O(h(x))</SPAN> 
+  <LI><SPAN class=math>f(x)+g(x)=O(<SPAN class=func>max</SPAN>(f(x),g(x))</SPAN> 
+
+  <LI><SPAN class=math>Cf(x)=O(f(x))</SPAN>, где <SPAN class=math>C</SPAN> - 
+  константа 
+  <LI><SPAN class=math>x<SUP>n</SUP>=O(x<SUP>m</SUP>)</SPAN>, если <SPAN 
+  class=math>n&lt;=m</SPAN> 
+  <LI><SPAN class=math>x<SUP>n</SUP>=O(m<SUP>x</SUP>)</SPAN> 
+  <LI><SPAN class=math>m<SUP>x</SUP>=O(x<SUP>x</SUP>)</SPAN> 
+  <LI><SPAN class=math><SPAN class=func>log</SPAN> x=O(x)</SPAN> 
+  <LI><SPAN class=math><SPAN class=func>log</SPAN>(x!)=O(x<SPAN 
+  class=func>log</SPAN> x)</SPAN> 
+  <LI>Если время работы алгоритма <SPAN class=math>O(x)</SPAN>, то алгоритм 
+  называется <SPAN class=term>линейным</SPAN> 
+  <LI>Если время работы алгоритма <SPAN class=math>O(x<SUP>n</SUP>)</SPAN> для 
+  некоторого фиксированного <SPAN class=math>n</SPAN>, то алгоритм называется 
+  <SPAN class=term>полиномиальным</SPAN> </LI></UL>
+<P>Асимптотическое соотношение показывает, как быстро будет расти время работы 
+алгоритма при больших <SPAN class=math>x</SPAN>, что весьма важно. Пусть, 
+например, у нас есть два алгоритма, один из которых работает за время <SPAN 
+class=math>f(x)=x<SUP>2</SUP></SPAN>, а второй за время <SPAN 
+class=math>g(x)=10000x</SPAN>. Ясно, что <SPAN 
+class=math>f(x)=O(x<SUP>2</SUP>)</SPAN>, <SPAN class=math>g(x)=O(x)</SPAN>. При 
+малых <SPAN class=math>x</SPAN> <SPAN class=math>f(x)</SPAN> будет намного 
+меньше <SPAN class=math>g(x)</SPAN>, но уже при <SPAN 
+class=math>x=100000</SPAN>, <SPAN class=math>f(x)=10<SUP>10</SUP></SPAN>, а 
+<SPAN class=math>g(x)=10<SUB>9</SUB>&lt;f(x)</SPAN>, и при увеличении <SPAN 
+class=math>x</SPAN> разница между этими двумя функциями будет быстро расти. 
+</P><A name=time>
+<H2 class=alg2head>Отсечение по времени</H2></A>
+<P>В большинстве задач есть ограничение по времени, и в случае его превышения за 
+тест ставится 0 баллов, даже если программа в процессе перебора уже нашла 
+правильный ответ. В таких случаях применяется отсечение по времени - в начале 
+выполнения программы записывается текущее время, и перебор прерывается в том 
+случае, если время выполнения программы превышает критическое значение; в этом 
+случае выводится наилучший полученный к этому моменту результат. </P>
+<P>В Турбо Паскале для реализации отсечения по времени используется переменная 
+типа Longint по абсолютному адресу $0:$46c; ее значение увеличивается на единицу 
+каждые 55 миллисекунд: </P>
+<TABLE class=algcode cellPadding=10>
+  <TBODY>
+  <TR>
+    <TD><PRE><SPAN class=highlight_keyword>program</SPAN> TheTime_TP;
+
+<SPAN class=highlight_keyword>const</SPAN>
+  CriticalTime = 4.8; <SPAN class=highlight_comment>{seconds}</SPAN>
+
+<SPAN class=highlight_keyword>var</SPAN>
+   Ct : Longint <SPAN class=highlight_keyword>absolute</SPAN> 0:$46c;
+   Ot : Longint;
+
+<SPAN class=highlight_keyword>begin</SPAN>
+  Ot := Ct + Trunc(CriticalTime*1000/55);
+  ...
+  <SPAN class=highlight_keyword>while</SPAN> ... <SPAN class=highlight_keyword>do</SPAN>
+  <SPAN class=highlight_keyword>begin</SPAN>
+    <SPAN class=highlight_keyword>if</SPAN> Ct&gt;Ot <SPAN class=highlight_keyword>then</SPAN>
+      Break;
+    ...
+  <SPAN class=highlight_keyword>end</SPAN>;
+  ...
+<SPAN class=highlight_keyword>end</SPAN>.
+</PRE></TD></TR></TBODY></TABLE>
+<P>В Free Pascal для реализации отсечения по времени используется функция 
+<CODE>Now()</CODE> из модуля <CODE>SysUtils</CODE>; она возвращает текущее время 
+и дату в формате <CODE>TDateTime</CODE>; <CODE>Now()</CODE> становится больше на 
+единицу через 1 сутки: </P>
+<TABLE class=algcode cellPadding=10>
+  <TBODY>
+  <TR>
+    <TD><PRE><SPAN class=highlight_keyword>program</SPAN> TheTime_FP;
+
+<SPAN class=highlight_keyword>uses</SPAN>
+  SysUtils;
+
+<SPAN class=highlight_keyword>const</SPAN>
+  CriticalTime = 4.8; <SPAN class=highlight_comment>{seconds}</SPAN>
+  CriticalD : TDateTime = CriticalTime/(24*60*60);
+
+<SPAN class=highlight_keyword>var</SPAN>
+  Ot : TDateTime;
+
+<SPAN class=highlight_keyword>begin</SPAN>
+  Ot := Now + CriticalTime;
+  ...
+  <SPAN class=highlight_keyword>while</SPAN> ... <SPAN class=highlight_keyword>do</SPAN>
+  <SPAN class=highlight_keyword>begin</SPAN>
+    <SPAN class=highlight_keyword>if</SPAN> Now&gt;Ot <SPAN class=highlight_keyword>then</SPAN>
+      Break;
+    ...
+  <SPAN class=highlight_keyword>end</SPAN>;
+  ...
+<SPAN class=highlight_keyword>end</SPAN>.
+</PRE></TD></TR></TBODY></TABLE><BR>
+<HR>
+
+<TABLE style="FONT-SIZE: 10pt" width="100%">
+  <TBODY>
+  <TR>
+    <TD align=left>© Semyon Dyatlov</TD>
+    <TD align=right><A href="mailto:dyatl@narod.ru">Mail 
+me</A></TD></TR></TBODY></TABLE><A style="FONT-SIZE: 8pt; COLOR: white" 
+href="http://pco.iis.nsk.su/~dyatlov/alg/intro/fakes.php">Interesting things</A> 
+</BODY></HTML>

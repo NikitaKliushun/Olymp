@@ -1,0 +1,28 @@
+
+function P( N: Longint ): Boolean;
+var
+   i: Longint;
+begin
+   i := 1;
+   while Prime[i]*Prime[i] <= N do
+   if N mod Prime[i] = 0 then begin P:=false; Exit; end
+                         else Inc(i);
+  P:=true;
+end;
+
+begin
+  Read(N);
+  Prime [1]:=2;
+  KP := 1;
+  i := 3;
+  while i <= N do
+   begin
+     if P(i) then
+        begin
+            Inc(KP);
+            Prime[KP]:=i;
+        end;
+     Inc(i,2);
+   end;
+  for i:=1 to KP do Write(Prime[i],' ');
+end.

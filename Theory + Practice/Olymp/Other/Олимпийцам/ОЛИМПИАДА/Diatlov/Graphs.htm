@@ -1,0 +1,788 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0050)http://pco.iis.nsk.su/~dyatlov/alg/graph/index.php -->
+<HTML><HEAD><TITLE>Олимпиадное программирование в Новосибирске</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1251"><LINK 
+href="Graphs_files/text.css" type=text/css rel=stylesheet>
+<META content="MSHTML 6.00.2800.1276" name=GENERATOR></HEAD>
+<BODY leftMargin=16 topMargin=16><A name=start>
+<H1 class=alghead>Алгоритмы на графах</H1></A>
+<P>В этом разделе описано несколько алгоритмов на графах</P><A name=intro>
+<H2 class=alg2head>Что такое граф?</H2></A>
+<P><SPAN class=term>Граф</SPAN> состоит из вершин и ребер. <SPAN 
+class=term>Вершины</SPAN> графа - объекты любой природы; поскольку их должно 
+быть конечное число, то мы будем обозначать их натуральными числами. <SPAN 
+class=term>Ребра</SPAN> графа соединяют некоторые из его вершин. Если ребра 
+имеют направление, то граф называется <SPAN class=term>ориентированным</SPAN> 
+(<SPAN class=term>орграфом</SPAN>); в противном случае он <SPAN 
+class=term>неориентированный</SPAN>. Если в графе есть ребро C из вершины A в 
+вершину B, то говорят, что ребро C <SPAN class=term>инцидентно</SPAN> вершинам A 
+и B, а также что вершина A <SPAN class=term>смежна</SPAN> с вершиной B. </P>
+<TABLE width="100%" align=center border=0>
+  <TBODY>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD align=middle>а)</TD>
+    <TD align=middle>б)</TD>
+    <TD>&nbsp;</TD></TR>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD align=middle width=200><IMG alt="Ориентированный граф" 
+      src="Graphs_files/graph1.gif">&nbsp;</TD>
+    <TD align=middle width=200>&nbsp;<IMG alt="Неориентированный граф" 
+      src="Graphs_files/graph2.gif"></TD>
+    <TD>&nbsp;</TD></TR>
+  <TR>
+    <TD align=middle colSpan=4>Рис. 1. Примеры графов</TD></TR></TBODY></TABLE>
+<P>На рис. 1(а) изображен ориентированный граф. Ребра идут из вершины 1 в 
+вершину 2, из 2 в 3, из 3 в 1, из 1 в 4, из 4 в 1, из 4 в 3. На рис. 2(б) 
+изображен неориентированный граф. Ребра соединяют вершины 1 и 2, 1 и 4, 2 и 4, 3 
+и 4. </P>
+<P><SPAN class=term>Степень</SPAN> вершины - число инцидентных ей ребер. Для 
+орграфа есть <SPAN class=term>входящая степень</SPAN> - число входящих в вершину 
+ребер, и <SPAN class=term>исходящая степень</SPAN> - число исходящих из вершины 
+ребер. Вершина называется <SPAN class=term>четной</SPAN>, если ее степень четна, 
+и <SPAN class=term>нечетной</SPAN> в противном случае. Вершина степени 0 
+называется <SPAN class=term>изолированной</SPAN>. <SPAN class=term>Путь</SPAN> в 
+графе - последовательность вершин, каждые две соседние из которых смежные. <SPAN 
+class=term>Длина пути</SPAN> - количество вершин в нем минус 1. Если из вершины 
+A в вершину B есть путь, то говорят, что вершина B <SPAN 
+class=term>достижима</SPAN> из вершины A. Путь называется <SPAN 
+class=term>простым</SPAN>, если все вершины в нем различны. <SPAN 
+class=term>Цикл</SPAN> в ориентированном графе - путь длины больше 0, в котором 
+первая и последняя вершины совпадают. Цикл называется <SPAN 
+class=term>простым</SPAN>, если в нем нет совпадающих вершин, кроме первой и 
+последней. В неориентированном графе <SPAN class=term>цикл</SPAN> - путь длины 
+не меньше 3, в котором первая и последняя вершины совпадают. Граф, в котором нет 
+циклов, называется <SPAN class=term>ациклическим</SPAN>. Неориентированный граф 
+называется <SPAN class=term>связным</SPAN>, если из любая его вершина достижима 
+из любой другой. Любой неориентированный граф можно разбить на <SPAN 
+class=term>компоненты связности</SPAN>, т. е. такие непересекающиеся множества 
+вершин, что вершина A достижима из B в том и только в том случае, если эти 
+вершины принадлежат одной компоненте связности. </P>
+<P>В графе на рис. 1(а) вершина 1 имеет входящую степень 2, исходящую - 2, 
+вершина 2 - 1/1, 3 - 2/1, 4 - 1/2. В графе на рис. 1(б) вершина 1 имеет степень 
+2, 2 - 2, 3 - 1, 4 - 3. В графе на рис. 1(а) есть пути (1,2,3,1,4) длины 4, 
+(1,4,3) длины 2, (3,1,4,3) длины 3, причем второй является простым, а третий - 
+простым циклом. В графе на рис. 1(б) есть пути (1,2,4,3), (1,4), (1,4,2,4), 
+причем первые два простые, а третий - цикл. Путь (1,2,1) не является ни простым, 
+ни циклом. Граф справа связный. </P>
+<P><SPAN class=term>Полный</SPAN> граф - граф, в котором любая вершина смежна 
+любой другой. <SPAN class=term>Двудольный</SPAN> граф - граф, в котором вершины 
+можно разбить на два множества A и B так, что никакие две вершины, принадлежащие 
+одному множеству, не являются смежными. Ациклический неориентированный граф 
+называют <SPAN class=term>лесом</SPAN>, а связный лес называют <SPAN 
+class=term>деревом</SPAN>. </P>
+<P><SPAN class=term>Взвешенный</SPAN> граф - граф, на ребрах которого написаны 
+числа, которые называются <SPAN class=term>весами</SPAN> ребер. </P>
+<TABLE width="100%" align=center border=0>
+  <TBODY>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD align=middle>а)</TD>
+    <TD align=middle>б)</TD>
+    <TD>&nbsp;</TD></TR>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD align=middle width=145><IMG alt="Полный граф" 
+      src="Graphs_files/graph3.gif">&nbsp;</TD>
+    <TD align=middle width=145>&nbsp;<IMG alt="Двудольный граф" 
+      src="Graphs_files/graph4.gif"></TD>
+    <TD>&nbsp;</TD></TR>
+  <TR>
+    <TD align=middle colSpan=4>Рис. 2. Пример полного и двудольного 
+  графа.</TD></TR></TBODY></TABLE>
+<TABLE width="100%" align=center border=0>
+  <TBODY>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD align=middle>а)</TD>
+    <TD align=middle>б)</TD>
+    <TD>&nbsp;</TD></TR>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD align=middle width=145><IMG alt=Лес 
+    src="Graphs_files/graph5.gif">&nbsp;</TD>
+    <TD align=middle width=145>&nbsp;<IMG alt=Дерево 
+      src="Graphs_files/graph6.gif"></TD>
+    <TD>&nbsp;</TD></TR>
+  <TR>
+    <TD align=middle colSpan=4>Рис. 3. Пример леса и 
+дерева</TD></TR></TBODY></TABLE><A name=struct>
+<H2 class=alg2head>Способы представления</H2></A>
+<H3>Матрица смежности</H3>
+<P><SPAN class=term>Матрица смежности</SPAN> графа - двумерный массив размера 
+<SPAN class=math>NxN</SPAN>, где <SPAN class=math>N</SPAN> - число вершин графа. 
+Обозначим ее за <SPAN class=math>G</SPAN>. В обычных графах <SPAN 
+class=math>G[i,j]=1</SPAN> тогда и только тогда, когда из вершины <SPAN 
+class=math>i</SPAN> есть ребро в вершину <SPAN class=math>j</SPAN>; при этом в 
+неориентированных графах <SPAN class=math>G[i,j]=G[j,i]</SPAN>. Во взвешенных 
+графах <SPAN class=math>G[i,j]</SPAN> равняется весу ребра из <SPAN 
+class=math>i</SPAN> в <SPAN class=math>j</SPAN> или -1, если такого ребра нет. В 
+мультиграфах <SPAN class=math>G[i,j]</SPAN> равняется числу ребер из i в j. </P>
+<P>Матрица смежности занимает область памяти размера <SPAN 
+class=math>O(N<SUP>2</SUP>)</SPAN>. </P>
+<H3>Списки смежности</H3>
+<P><SPAN class=term>Списки смежности</SPAN> графа - линейный массив списков. 
+Размер массива равен <SPAN class=math>N</SPAN>; <SPAN class=math>i</SPAN>-й 
+элемент массива - список ребер, исходящих из вершины <SPAN class=math>i</SPAN>. 
+Для каждого ребра хранится вершина, в которую оно ведет и, возможно, вес ребра. 
+</P>
+<P>Списки смежности занимают <SPAN class=math>O(M+N)</SPAN> памяти, где <SPAN 
+class=math>M</SPAN> - число ребер графа. </P><A name=dfs>
+<H2 class=alg2head>Поиск в глубину</H2></A>
+<P>Пусть наш граф из N вершин представлен матрицей смежности G. Заведем массив V 
+из N элементов, в котором на i-м месте будет стоять true, если вершина i была 
+рассмотрена нами ранее, и false в противном случае. </P>
+<P>Обход в глубину осуществляется по следующему принципу: сначала посещается 
+вершина 1, затем любая вершина A, соединенная с 1, затем любая еще не посещенная 
+вершина B, соединенная с A и т. д. Когда очередную вершину нельзя будет выбрать, 
+алгоритм будет возвращаться к предыдущей рассмотренной. Таким образом обходятся 
+все компоненты связности графа. Алгоритм обхода в глубину обычно реализуется 
+рекурсивной процедурой: </P>
+<TABLE class=algcode cellPadding=10>
+  <TBODY>
+  <TR>
+    <TD><PRE><SPAN class=highlight_keyword>const</SPAN>
+  MaxN = 100;
+
+<SPAN class=highlight_keyword>var</SPAN>
+  N : Integer;
+  G : <SPAN class=highlight_keyword>array</SPAN> [1 .. MaxN,1 .. MaxN] <SPAN class=highlight_keyword>of</SPAN> Boolean;
+  V : <SPAN class=highlight_keyword>array</SPAN> [1 .. MaxN] <SPAN class=highlight_keyword>of</SPAN> Boolean;
+
+<SPAN class=highlight_keyword>procedure</SPAN> DFS_Work(A : Integer);
+<SPAN class=highlight_keyword>var</SPAN>
+  B : Integer;
+<SPAN class=highlight_keyword>begin</SPAN>
+  V[A] := True;
+  Writeln(A);
+  <SPAN class=highlight_keyword>for</SPAN> B := 1 <SPAN class=highlight_keyword>to</SPAN> N <SPAN class=highlight_keyword>do</SPAN>
+    <SPAN class=highlight_keyword>if</SPAN> G[A,B] <SPAN class=highlight_keyword>and</SPAN> <SPAN class=highlight_keyword>not</SPAN> V[B] <SPAN class=highlight_keyword>then</SPAN>
+      DFS_Work(B);
+<SPAN class=highlight_keyword>end</SPAN>;
+
+<SPAN class=highlight_keyword>procedure</SPAN> DFS;
+<SPAN class=highlight_keyword>var</SPAN>
+  A : Integer;
+<SPAN class=highlight_keyword>begin</SPAN>
+  FillChar(V,sizeof(V),0);
+  <SPAN class=highlight_keyword>for</SPAN> A := 1 <SPAN class=highlight_keyword>to</SPAN> N <SPAN class=highlight_keyword>do</SPAN>
+    <SPAN class=highlight_keyword>if</SPAN> <SPAN class=highlight_keyword>not</SPAN> V[A] <SPAN class=highlight_keyword>then</SPAN>
+      DFS_Work(A);
+<SPAN class=highlight_keyword>end</SPAN>;
+</PRE></TD></TR></TBODY></TABLE>
+<P>Например, для графа, изображенного ниже, порядок обхода будет таким: 
+1,4,2,3,5,6,9,8,7. </P>
+<TABLE width="100%">
+  <TBODY>
+  <TR>
+    <TD align=middle width="48%"><IMG alt="Граф для обхода" 
+      src="Graphs_files/graf7.gif"></TD></TR>
+  <TR>
+    <TD align=middle>Рис. 4. Граф для обхода </TD></TR></TBODY></TABLE>
+<P>Оценим время работы данной реализации алгоритма. Процедура 
+<CODE>DFS_Work</CODE> вызывается N раз (по одному разу для каждой вершины), и 
+она делает O(N) действий, не считая рекурсивного вызова; значит, общее время 
+работы O(N<SUP>2</SUP>). Для работы алгоритма требуется O(N) памяти, не считая 
+матрицу смежности (O(N) для хранения массива V и O(N) для хранения стека вызовов 
+процедуры <CODE>DFS_Work</CODE>). </P>
+<P>Реализация для графа, заданного списками смежности: </P>
+<TABLE class=algcode cellPadding=10>
+  <TBODY>
+  <TR>
+    <TD><PRE><SPAN class=highlight_keyword>const</SPAN>
+  MaxN = 100;
+  MaxM = 10000;
+
+<SPAN class=highlight_keyword>type</SPAN>
+  TConn = <SPAN class=highlight_keyword>record</SPAN>
+    A,B : Integer;
+  <SPAN class=highlight_keyword>end</SPAN>;
+
+<SPAN class=highlight_keyword>var</SPAN>
+  N,M : Integer;
+  GA : <SPAN class=highlight_keyword>array</SPAN> [1 .. MaxN] <SPAN class=highlight_keyword>of</SPAN> Integer;
+  GB : <SPAN class=highlight_keyword>array</SPAN> [1 .. MaxM] <SPAN class=highlight_keyword>of</SPAN> TConn;
+  V : <SPAN class=highlight_keyword>array</SPAN> [1 .. MaxN] <SPAN class=highlight_keyword>of</SPAN> Boolean;
+
+<SPAN class=highlight_keyword>procedure</SPAN> DFS_Work(A : Integer);
+<SPAN class=highlight_keyword>var</SPAN>
+  B : Integer;
+<SPAN class=highlight_keyword>begin</SPAN>
+  V[A] := True;
+  Add(A);
+  B := GA[A];
+  <SPAN class=highlight_keyword>while</SPAN> B&lt;&gt;0 <SPAN class=highlight_keyword>do</SPAN>
+  <SPAN class=highlight_keyword>begin</SPAN>
+    <SPAN class=highlight_keyword>if</SPAN> <SPAN class=highlight_keyword>not</SPAN> V[GB[B].A] <SPAN class=highlight_keyword>then</SPAN> DFS_Work(GB[B].A);
+    B := GB[B].B;
+  <SPAN class=highlight_keyword>end</SPAN>;
+<SPAN class=highlight_keyword>end</SPAN>;
+
+<SPAN class=highlight_keyword>procedure</SPAN> DFS;
+<SPAN class=highlight_keyword>var</SPAN>
+  A : Integer;
+<SPAN class=highlight_keyword>begin</SPAN>
+  FillChar(V,sizeof(V),0);
+  <SPAN class=highlight_keyword>for</SPAN> A := 1 <SPAN class=highlight_keyword>to</SPAN> N <SPAN class=highlight_keyword>do</SPAN>
+    <SPAN class=highlight_keyword>if</SPAN> <SPAN class=highlight_keyword>not</SPAN> V[A] <SPAN class=highlight_keyword>then</SPAN>
+      DFS_Work(A);
+<SPAN class=highlight_keyword>end</SPAN>;
+</PRE></TD></TR></TBODY></TABLE>
+<P>Данная реализация требует O(M+N) времени и O(N) памяти. (здесь и далее M - 
+число ребер графа). </P>
+<P>С помощью обхода в глубину легко найти все вершины, достижимые из данной. Для 
+этого вызовем <CODE>DFS_Work</CODE> только для данной вершины. В результате в 
+массиве V значение true будет стоять только для тех вершин, которые достижимы из 
+данной. </P><A name=bfs>
+<H2 class=alg2head>Поиск в ширину</H2></A>
+<P>Для обхода в ширину нам понадобится очередь. <SPAN class=term>Очередь</SPAN> 
+- это структура данных, над которой можно выполнять четыре операции: очищать ее, 
+добавлять элемент в ее конец, получать ее первый элемент и удалять первый 
+элемент из очереди. Мы реализуем очередь массивом Q из N элементов и двумя 
+счетчиками: Ql и Qr, которые будут указывать положение в массиве соответственно 
+начала и конца очереди. Вначале, когда очередь пуста, Ql=1 и Qr=0. Реализация 
+операций над очередью очевидна. </P>
+<P>Мы будем обходить вершины начиная с данной вершины и обойдем только те из 
+них, которые достижимы из нее. Как и при обходе в глубину, заведем массив V из N 
+элементов, но теперь в нем будут записаны целые числа. i-й элемент массива будет 
+равен -1, если i-я вершина еще не была рассмотрена; иначе в i-м элементе будет 
+находиться длина кратчайшего пути от данной до i-й вершины. Обход в ширину очень 
+часто используется для отыскания кратчайших путей из некоторой вершины во все 
+остальные. В этом случае, поскольку сам обход не требуется, требуется убрать из 
+алгоритма строку <CODE>Writeln(Cur)</CODE>. Порядок обхода вершин в ширину будет 
+таким: сначала данная вершина, потом все вершины, которые с ней смежны, потом 
+все вершины, наикратчайший путь от которых до данной имеет длину 2, и т. д. В 
+конце обхода будут располагаться вершины, наиболее удаленные от данной. </P>
+<P>Ход работы алгоритма: <BR>Вначале мы добавляем в очередь первую вершину. 
+Затем, пока очередь не станет пустой, мы рассматриваем первую вершину в очереди, 
+обходим все ранее не обойденные вершины, с ней смежные, и удаляем первую вершину 
+в очереди. При обходе каждой вершины мы добавляем ее в конец очереди. </P>
+<P>Реализация алгоритма: </P>
+<TABLE class=algcode cellPadding=10>
+  <TBODY>
+  <TR>
+    <TD><PRE><SPAN class=highlight_keyword>const</SPAN>
+  MaxN = 100;
+
+<SPAN class=highlight_keyword>var</SPAN>
+  N : Integer;
+  G : <SPAN class=highlight_keyword>array</SPAN> [1 .. MaxN,1 .. MaxN] <SPAN class=highlight_keyword>of</SPAN> Boolean;
+  V : <SPAN class=highlight_keyword>array</SPAN> [1 .. MaxN] <SPAN class=highlight_keyword>of</SPAN> Integer;
+  Q : <SPAN class=highlight_keyword>array</SPAN> [1 .. MaxN] <SPAN class=highlight_keyword>of</SPAN> Integer;
+  Ql,Qr : Integer;
+
+<SPAN class=highlight_keyword>procedure</SPAN> BFS(A : Integer);
+<SPAN class=highlight_keyword>var</SPAN>
+  Cur : Integer;
+  B : Integer;
+<SPAN class=highlight_keyword>begin</SPAN>
+  FillChar(V,sizeof(V),255);
+  Ql:=1;
+  Qr:=1;
+  Q[1] := A;
+  V[A] := 0;
+  <SPAN class=highlight_keyword>while</SPAN> Qr &gt;= Ql <SPAN class=highlight_keyword>do</SPAN>
+  <SPAN class=highlight_keyword>begin</SPAN>
+    Cur:=Q[Ql];
+    Inc(Ql);
+    Writeln(Cur);
+    <SPAN class=highlight_keyword>for</SPAN> B := 1 <SPAN class=highlight_keyword>to</SPAN> N <SPAN class=highlight_keyword>do</SPAN>
+      <SPAN class=highlight_keyword>if</SPAN> G[Cur,B] <SPAN class=highlight_keyword>and</SPAN> (V[B]=-1) <SPAN class=highlight_keyword>then</SPAN> 
+        <SPAN class=highlight_keyword>begin</SPAN>
+          V[B]:=V[Cur]+1;
+          Inc(Qr);
+          Q[Qr]:=B;
+        <SPAN class=highlight_keyword>end</SPAN>;
+  <SPAN class=highlight_keyword>end</SPAN>;
+<SPAN class=highlight_keyword>end</SPAN>;
+</PRE></TD></TR></TBODY></TABLE>
+<P>Если запустить <CODE>BFS(5)</CODE> для графа с рис. 4, то порядок обхода 
+будет 5,2,3,6,9,8, а в массиве V для вершин 1-9 соответственно будут значения 
+-1,1,1,-1,0,1,-1,3,2. </P>
+<P>Оценим время работы алгоритма обхода в ширину. Главный цикл выполняется не 
+более чем N раз (каждая итерация соответствует 1 элементу очереди, и каждая 
+вершина бывает в очереди не более 1 раза), и время выполнения каждой его 
+итерации O(N); значит, общее время работы O(N<SUP>2</SUP>), как и для обхода в 
+глубину; для хранения очереди требуется O(N) памяти. При реализации графа 
+списками смежности алгоритм требует O(M+N) времени. </P><A name=topolog>
+<H2 class=alg2head>Топологическая сортировка</H2></A>
+<P>Рассмотрим орграф из N вершин, не имеющий циклов. Введем на его вершинах 
+частичное отношение порядка, а именно: вершина i считается меньше чем вершина j, 
+если в графе есть ребро из i в j. Задача топологической сортировки состоит в 
+том, чтобы построить для данного графа некоторый порядок обхода его вершин, 
+причем меньшая вершина должна стоять в этом порядке позже, чем большая. </P>
+<P>Для реализации алгоритма мы несколько изменим обход в глубину. Заметим, что 
+процедура <CODE>DFS_Work(A)</CODE> для орграфа посещает все вершины, достижимые 
+из A, то есть большие чем A. После обработки всех соседей A непройденные вершины 
+не могут быть больше ее: они либо были пройдены до вызова 
+<CODE>DFS_Work(A)</CODE>, либо были пройдены в процессе работы этого вызова. 
+Значит, вершина A больше, чем все оставшиеся, поэтому мы можем добавить ее в 
+порядок топологической сортировки. </P>
+<P>Реализация алгоритма: </P>
+<TABLE class=algcode cellPadding=10>
+  <TBODY>
+  <TR>
+    <TD><PRE><SPAN class=highlight_keyword>const</SPAN>
+  MaxN = 100;
+
+<SPAN class=highlight_keyword>var</SPAN>
+  N : Integer;
+  G : <SPAN class=highlight_keyword>array</SPAN> [1 .. MaxN,1 .. MaxN] <SPAN class=highlight_keyword>of</SPAN> Boolean;
+  V : <SPAN class=highlight_keyword>array</SPAN> [1 .. MaxN] <SPAN class=highlight_keyword>of</SPAN> Boolean;
+
+<SPAN class=highlight_keyword>procedure</SPAN> DFS_Work_Topolog(A : Integer);
+<SPAN class=highlight_keyword>var</SPAN>
+  B : Integer;
+<SPAN class=highlight_keyword>begin</SPAN>
+  V[A] := True;
+  <SPAN class=highlight_keyword>for</SPAN> B := 1 <SPAN class=highlight_keyword>to</SPAN> N <SPAN class=highlight_keyword>do</SPAN>
+    <SPAN class=highlight_keyword>if</SPAN> G[A,B] <SPAN class=highlight_keyword>and</SPAN> <SPAN class=highlight_keyword>not</SPAN> V[B] <SPAN class=highlight_keyword>then</SPAN>
+      DFS_Work_Topolog(B);
+  Writeln(A);
+<SPAN class=highlight_keyword>end</SPAN>;
+
+<SPAN class=highlight_keyword>procedure</SPAN> Topological_Sort;
+<SPAN class=highlight_keyword>var</SPAN>
+  A : Integer;
+<SPAN class=highlight_keyword>begin</SPAN>
+  FillChar(V,sizeof(V),0);
+  <SPAN class=highlight_keyword>for</SPAN> A := 1 <SPAN class=highlight_keyword>to</SPAN> N <SPAN class=highlight_keyword>do</SPAN>
+    <SPAN class=highlight_keyword>if</SPAN> <SPAN class=highlight_keyword>not</SPAN> V[A] <SPAN class=highlight_keyword>then</SPAN>
+      DFS_Work_Topolog(A);
+<SPAN class=highlight_keyword>end</SPAN>;
+</PRE></TD></TR></TBODY></TABLE>
+<P>Например, для графа, изображенного на рис. 5, данный алгоритм выдаст порядок 
+обхода 5,3,2,6,1,4. </P>
+<TABLE width="100%">
+  <TBODY>
+  <TR>
+    <TD align=middle width="48%"><IMG alt="Граф для топологической сортировки" 
+      src="Graphs_files/graf8.gif"></TD></TR>
+  <TR>
+    <TD align=middle>Рис. 5. Граф для топологической сортировки 
+</TD></TR></TBODY></TABLE>
+<P>Как и обход в глубину, топологическая сортировка требует O(N<SUP>2</SUP>) 
+времени и O(N) памяти для графа, заданного матрицей смежности, и O(M+N) времени 
+для графа, заданного списками смежности. </P><A name=bicolor>
+<H2 class=alg2head>Раскраска в два цвета</H2></A>
+<P>Пусть дан неориентированный граф G из N вершин. Требуется покрасить его в два 
+цвета (черный и белый) так, что никакие две вершины одного цвета не будут 
+смежными, либо сказать, что это невозможно. </P>
+<P>Для решения этой задачи мы несколько видоизменим алгоритм обхода в глубину. 
+Изменим смысл массива V: V[i]=0, если вершина i еще не была посещена, V[i]=1, 
+если вершина i белого цвета, и V[i]=2, если вершина i черного цвета. Перед 
+каждым рекурсивном вызовом процедуры <CODE>DFS_Work(b)</CODE> из процедуры 
+<CODE>DFS_Work(a)</CODE> мы будем сравнивать значения V[a] и V[b]; должно 
+выполняться условие V[a]+V[b]=3, иначе раскраска в два цвета невозможна. </P>
+<P>Реализация алгоритма: </P>
+<TABLE class=algcode cellPadding=10>
+  <TBODY>
+  <TR>
+    <TD><PRE><SPAN class=highlight_keyword>const</SPAN>
+  MaxN = 100;
+
+<SPAN class=highlight_keyword>var</SPAN>
+  N : Integer;
+  G : <SPAN class=highlight_keyword>array</SPAN> [1 .. MaxN,1 .. MaxN] <SPAN class=highlight_keyword>of</SPAN> Boolean;
+  V : <SPAN class=highlight_keyword>array</SPAN> [1 .. MaxN] <SPAN class=highlight_keyword>of</SPAN> Byte;
+
+<SPAN class=highlight_keyword>function</SPAN> DFS_Work_BiColor(A : Integer) : Boolean;
+<SPAN class=highlight_keyword>var</SPAN>
+  B : Integer;
+<SPAN class=highlight_keyword>begin</SPAN>
+  DFS_Work_BiColor := False;
+  Writeln(A);
+  <SPAN class=highlight_keyword>for</SPAN> B := 1 <SPAN class=highlight_keyword>to</SPAN> N <SPAN class=highlight_keyword>do</SPAN>
+    <SPAN class=highlight_keyword>if</SPAN> G[A,B] <SPAN class=highlight_keyword>then</SPAN>
+    <SPAN class=highlight_keyword>begin</SPAN>
+      <SPAN class=highlight_keyword>if</SPAN> V[B]=0 <SPAN class=highlight_keyword>then</SPAN>
+      <SPAN class=highlight_keyword>begin</SPAN>
+        V[B] := 3-V[A];
+        <SPAN class=highlight_keyword>if</SPAN> <SPAN class=highlight_keyword>not</SPAN> DFS_Work_BiColor(B) <SPAN class=highlight_keyword>then</SPAN>
+          exit;
+      <SPAN class=highlight_keyword>end</SPAN>
+      <SPAN class=highlight_keyword>else</SPAN>
+        <SPAN class=highlight_keyword>if</SPAN> V[A]+V[B]&lt;&gt;3 <SPAN class=highlight_keyword>then</SPAN>
+          exit;
+    <SPAN class=highlight_keyword>end</SPAN>;
+  DFS_Work_BiColor := True;
+<SPAN class=highlight_keyword>end</SPAN>;
+
+<SPAN class=highlight_keyword>function</SPAN> BiColor : Boolean;
+<SPAN class=highlight_keyword>var</SPAN>
+  A : Integer;
+<SPAN class=highlight_keyword>begin</SPAN>
+  BiColor := False;
+  FillChar(V,sizeof(V),0);
+  <SPAN class=highlight_keyword>for</SPAN> A := 1 <SPAN class=highlight_keyword>to</SPAN> N <SPAN class=highlight_keyword>do</SPAN>
+    <SPAN class=highlight_keyword>if</SPAN> V[A]=0 <SPAN class=highlight_keyword>then</SPAN>
+    <SPAN class=highlight_keyword>begin</SPAN>
+      V[A] := 1;
+      <SPAN class=highlight_keyword>if</SPAN> <SPAN class=highlight_keyword>not</SPAN> DFS_Work_BiColor(A) <SPAN class=highlight_keyword>then</SPAN>
+        exit;
+    <SPAN class=highlight_keyword>end</SPAN>;
+  BiColor := True;
+<SPAN class=highlight_keyword>end</SPAN>;
+</PRE></TD></TR></TBODY></TABLE>
+<P>Алгоритм раскраски графа в два цвета требует, как и алгоритм обхода в 
+глубину, O(N<SUP>2</SUP>) времени и O(N) памяти для графа, заданного матрицей 
+смежности, и O(M+N) времени для графа, заданного списками смежности. </P><A 
+name=mst>
+<H2 class=alg2head>Нахождение минимального каркаса</H2></A>
+<P>Рассмотрим неориентированный связный взвешенный граф с N вершинами. <SPAN 
+class=term>Каркасом</SPAN> в этом графе называется дерево, содержащее все 
+вершины данного графа, причем ребра этого дерева являются также и ребрами графа. 
+<SPAN class=term>Вес каркаса</SPAN> - сумма весов входящих в него ребер. В 
+данном разделе решается следующая задача: найти в графе каркас минимального 
+веса. </P>
+<P>Для решения этой задачи есть два алгоритма: Краскала и Прима. Мы рассмотрим 
+только алгоритм Прима. </P><A name=djkstra>
+<H2 class=alg2head>Алгоритм Дейкстры</H2></A>
+<P>Рассмотрим взвешенный орграф из N вершин с неотрицательными весами на ребрах. 
+Алгоритм Дейкстры находит в этом графе минимальные длины путей от первой вершины 
+до всех остальных. </P>
+<P>Будем записывать результат в массив V длины N, значение которого такое же, 
+как и в алгоритме обхода в ширину. Мы будем делить все вершины графа на <SPAN 
+class=term>помеченные</SPAN> и <SPAN class=term>непомеченные</SPAN>. В начале 
+все вершины непомеченные. Для хранения помеченности вершин используем массив 
+Passed из N элементов, i-й элемент которого будет равен true только если i-я 
+вершина помечена. Кроме того, на каждом шаге алгоритма мы будем считать 
+некоторую вершину графа <SPAN class=term>текущей</SPAN>. Вершина будет 
+помеченной, только если она была на каком-либо шаге текущей. </P>
+<P>Каждый шаг алгоритма состоит из двух частей: </P>
+<P>1. "Улучшение" вершин. Мы рассматриваем текущую вершину и все вершины, из 
+которых есть в нее ребра. Пусть текущая вершина - Cur, и из нее есть ребро в 
+вершину A. Тогда минимальная длина пути из 1 в Cur равна V[Cur], а длина ребра 
+из Cur в A равна G[Cur,A]; значит, длина минимального пути из 1 в A, на 
+последнем шаге проходящего через Cur, равна V[Cur]+G[Cur,A]; если это число 
+меньше чем V[A] или V[A]=-1, то мы запишем это число в V[A]. </P>
+<P>2. Выбор новой текущей вершины. Мы выбираем новую текущую вершину как вершину 
+с минимальным значением V из всех непомеченных вершин i, для которых 
+V[i]&lt;&gt;-1; таким образом, новая текущая вершина будет на данный момент 
+самой близкой к 1 из непомеченных. </P>
+<P>Алгоритм заканчивает свою работу, когда мы не сможем выбрать текущую вершину. 
+</P>
+<P>Реализация алгоритма: </P>
+<TABLE class=algcode cellPadding=10>
+  <TBODY>
+  <TR>
+    <TD><PRE><SPAN class=highlight_keyword>const</SPAN>
+  MaxN = 100;
+
+<SPAN class=highlight_keyword>var</SPAN>
+  N : Integer;
+  G : <SPAN class=highlight_keyword>array</SPAN> [1 .. MaxN,1 .. MaxN] <SPAN class=highlight_keyword>of</SPAN> Integer;
+  V : <SPAN class=highlight_keyword>array</SPAN> [1 .. MaxN] <SPAN class=highlight_keyword>of</SPAN> Integer;
+
+<SPAN class=highlight_keyword>procedure</SPAN> Djkstra(A : Integer);
+<SPAN class=highlight_keyword>var</SPAN>
+  B : integer;
+  Passed : <SPAN class=highlight_keyword>array</SPAN> [1 .. MaxN] <SPAN class=highlight_keyword>of</SPAN> Boolean;
+  Cur : integer;
+<SPAN class=highlight_keyword>begin</SPAN>
+  fillchar(Passed,sizeof(Passed),0);
+  fillchar(V,sizeof(V),255);
+  Cur := A;
+  V[cur] := 0;
+  <SPAN class=highlight_keyword>repeat</SPAN>
+    Passed[Cur]:=true;
+    <SPAN class=highlight_keyword>for</SPAN> B:=1 <SPAN class=highlight_keyword>to</SPAN> N <SPAN class=highlight_keyword>do</SPAN>
+      <SPAN class=highlight_keyword>if</SPAN> (G[Cur,B]&lt;&gt;-1) <SPAN class=highlight_keyword>and</SPAN> ((V[B]=-1) <SPAN class=highlight_keyword>or</SPAN> (V[B]&gt;V[Cur]+G[Cur,B])) <SPAN class=highlight_keyword>then</SPAN>
+        V[B]:=V[Cur]+G[Cur,B];
+    Cur := 0;
+    <SPAN class=highlight_keyword>for</SPAN> B:=1 <SPAN class=highlight_keyword>to</SPAN> N <SPAN class=highlight_keyword>do</SPAN>
+      <SPAN class=highlight_keyword>if</SPAN> (<SPAN class=highlight_keyword>not</SPAN> Passed[B]) <SPAN class=highlight_keyword>and</SPAN> (V[B]&lt;&gt;-1) <SPAN class=highlight_keyword>and</SPAN> ((Cur=0) <SPAN class=highlight_keyword>or</SPAN> (V[Cur]&gt;V[B])) <SPAN class=highlight_keyword>then</SPAN>
+        Cur := B;
+  <SPAN class=highlight_keyword>until</SPAN> Cur=0;
+<SPAN class=highlight_keyword>end</SPAN>;
+</PRE></TD></TR></TBODY></TABLE>
+<P>Оценим время работы алгоритма Дейкстры. Алгоритм выполнит не более N шагов 
+(каждый шаг связан с конкретной текущей вершиной), и каждый его шаг требует O(N) 
+операций; значит, время работы алгоритма O(N<SUP>2</SUP>). Очевидно, что 
+алгоритм требует O(N) дополнительной памяти. </P>
+<P>Существуют две модификации алгоритма Дейкстры - с двоичной и с фибоначчиевой 
+кучей. Первый из них требует O(M log(N)), а второй - O(N log(N)+M) операций, где 
+M - количество ребер графа. Ввиду некоторой сложности их реализации мы не будем 
+их здесь рассматривать. </P><A name=floyd>
+<H2 class=alg2head>Алгоритм Флойда</H2></A>
+<P>Рассмотрим взвешенный орграф G с N вершинами. Алгоритм Флойда находит в нем 
+длину минимальных путей из каждой вершины в каждую. </P>
+<P>Реализация алгоритма предельно проста. Мы будем записывать решение в массив V 
+размера NxN: V[i,j] - длина минимального пути из i в j. Вначале V=G. Мы 
+пробегаем все вершины j,i,k и, в том случае если V[i,k] больше чем 
+V[i,j]+V[j,k], то есть пройти из i в k через j быстрее, чем напрямую, мы 
+изменяем значение V[i,k] на V[i,j]+V[j,k]. </P>
+<P>Реализация алгоритма: </P>
+<TABLE class=algcode cellPadding=10>
+  <TBODY>
+  <TR>
+    <TD><PRE><SPAN class=highlight_keyword>const</SPAN>
+  MaxN = 100;
+
+<SPAN class=highlight_keyword>var</SPAN>
+  N : Integer;
+  G : <SPAN class=highlight_keyword>array</SPAN> [1 .. MaxN,1 .. MaxN] <SPAN class=highlight_keyword>of</SPAN> Integer;
+  V : <SPAN class=highlight_keyword>array</SPAN> [1 .. MaxN,1 .. MaxN] <SPAN class=highlight_keyword>of</SPAN> Longint;
+
+<SPAN class=highlight_keyword>procedure</SPAN> Floyd;
+<SPAN class=highlight_keyword>var</SPAN>
+  I,J,K : Integer;
+<SPAN class=highlight_keyword>begin</SPAN>
+  <SPAN class=highlight_keyword>for</SPAN> I:=1 <SPAN class=highlight_keyword>to</SPAN> N <SPAN class=highlight_keyword>do</SPAN>
+  <SPAN class=highlight_keyword>for</SPAN> J:=1 <SPAN class=highlight_keyword>to</SPAN> N <SPAN class=highlight_keyword>do</SPAN>
+    V[I,J] := G[I,J];
+  <SPAN class=highlight_keyword>for</SPAN> I:=1 <SPAN class=highlight_keyword>to</SPAN> N <SPAN class=highlight_keyword>do</SPAN>
+    V[I,I] := 0;
+  <SPAN class=highlight_keyword>for</SPAN> J:=1 <SPAN class=highlight_keyword>to</SPAN> N <SPAN class=highlight_keyword>do</SPAN>
+  <SPAN class=highlight_keyword>for</SPAN> I:=1 <SPAN class=highlight_keyword>to</SPAN> N <SPAN class=highlight_keyword>do</SPAN>
+  <SPAN class=highlight_keyword>for</SPAN> K:=1 <SPAN class=highlight_keyword>to</SPAN> N <SPAN class=highlight_keyword>do</SPAN>
+    <SPAN class=highlight_keyword>if</SPAN> (V[I,J]&lt;&gt;-1) <SPAN class=highlight_keyword>and</SPAN> (V[J,K]&lt;&gt;-1) <SPAN class=highlight_keyword>and</SPAN> 
+    ((V[I,K]=-1) <SPAN class=highlight_keyword>or</SPAN> (V[I,K]&gt;V[I,J]+V[J,K])) <SPAN class=highlight_keyword>then</SPAN>
+      V[I,K] := V[I,J] + V[J,K];
+<SPAN class=highlight_keyword>end</SPAN>;
+</PRE></TD></TR></TBODY></TABLE>
+<P>Алгоритм Флойда работает для любых, в том числе и отрицательных, весов ребер 
+графа. Если в графе есть цикл отрицательного веса, то после окончания работы 
+алгоритма для некоторой вершины i будет V[i,i]&lt;0. </P>
+<P>Очевидно, что алгоритм Флойда требует O(N^3) операций и O(N<SUP>2</SUP>) 
+дополнительной памяти (для хранения массива V). </P><A name=euler>
+<H2 class=alg2head>Нахождение эйлеровых циклов</H2></A>
+<P>Пусть дан орграф G с N вершинами. <SPAN class=term>Эйлеровым циклом</SPAN> в 
+нем называется цикл, в котором каждое ребро графа встречается ровно 1 раз. Можно 
+доказать, что в графе существует эйлеров цикл (граф является <SPAN 
+class=term>эйлеровым</SPAN>) тогда и только тогда, когда граф, во-первых, 
+является связным (не считая изолированных вершин), и, во-вторых, у каждой его 
+вершины входящая степень равна исходящей. </P>
+<P>Описанный алгоритм построения эйлеровых циклов уже предполагает, что граф 
+эйлеров. Мы пойдем из любой неизолированной вершины (пусть это вершина 1), и 
+будем идти, добавляя вершины в стек и удаляя ребра, по которым мы проходим, пока 
+мы не сможем пойти из очередной вершины; тогда будем удалять вершины из стека в 
+порядок цикла, пока не встретим вершину, из которой сможем пойти. В результате 
+получим вершины цикла в обратном порядке. </P>
+<P>Мы реализуем алгоритм рекурсивной процедурой: </P>
+<TABLE class=algcode cellPadding=10>
+  <TBODY>
+  <TR>
+    <TD><PRE><SPAN class=highlight_keyword>const</SPAN>
+  MaxN = 100;
+
+<SPAN class=highlight_keyword>var</SPAN>
+  N : Integer;
+  G : <SPAN class=highlight_keyword>array</SPAN> [1 .. MaxN,1 .. MaxN] <SPAN class=highlight_keyword>of</SPAN> Boolean;
+  L : <SPAN class=highlight_keyword>array</SPAN> [1 .. MaxN] <SPAN class=highlight_keyword>of</SPAN> Integer;
+
+<SPAN class=highlight_keyword>procedure</SPAN> Euler_Work(A : Integer);
+<SPAN class=highlight_keyword>var</SPAN>
+  B : Integer;
+<SPAN class=highlight_keyword>begin</SPAN>
+  B := 1;
+  <SPAN class=highlight_keyword>while</SPAN> true <SPAN class=highlight_keyword>do</SPAN>
+  <SPAN class=highlight_keyword>begin</SPAN>
+    <SPAN class=highlight_keyword>if</SPAN> B&lt;=L[A] <SPAN class=highlight_keyword>then</SPAN> B:=L[A]+1;
+    <SPAN class=highlight_keyword>if</SPAN> B&gt;N <SPAN class=highlight_keyword>then</SPAN> break;
+    <SPAN class=highlight_keyword>if</SPAN> G[B,A] <SPAN class=highlight_keyword>then</SPAN>
+    <SPAN class=highlight_keyword>begin</SPAN>
+      L[A] := B;
+      Euler_Work(B);
+    <SPAN class=highlight_keyword>end</SPAN>;
+    Inc(B);
+  <SPAN class=highlight_keyword>end</SPAN>;
+  Writeln(A);
+<SPAN class=highlight_keyword>end</SPAN>;
+
+<SPAN class=highlight_keyword>procedure</SPAN> Euler;
+<SPAN class=highlight_keyword>var</SPAN>
+  A,B : Integer;
+  Found : Boolean;
+<SPAN class=highlight_keyword>begin</SPAN>
+  Found := false;
+  Fillchar(L,sizeof(L),0);
+  <SPAN class=highlight_keyword>for</SPAN> A:=1 <SPAN class=highlight_keyword>to</SPAN> N <SPAN class=highlight_keyword>do</SPAN>
+  <SPAN class=highlight_keyword>for</SPAN> B:=1 <SPAN class=highlight_keyword>to</SPAN> N <SPAN class=highlight_keyword>do</SPAN>
+    <SPAN class=highlight_keyword>if</SPAN> G[A,B] <SPAN class=highlight_keyword>and</SPAN> <SPAN class=highlight_keyword>not</SPAN> Found <SPAN class=highlight_keyword>then</SPAN>
+    <SPAN class=highlight_keyword>begin</SPAN>
+      Euler_Work(A);
+      Found := true;
+    <SPAN class=highlight_keyword>end</SPAN>;
+<SPAN class=highlight_keyword>end</SPAN>;
+</PRE></TD></TR></TBODY></TABLE>
+<P>Например, для графа, изображенного ниже, порядок будет таким: 
+1,2,3,4,2,4,1,3,1. </P>
+<TABLE width="100%">
+  <TBODY>
+  <TR>
+    <TD align=middle width="48%"><IMG alt="Эйлеров граф" 
+      src="Graphs_files/graf9.gif"></TD></TR>
+  <TR>
+    <TD align=middle>Рис. 6. Эйлеров граф </TD></TR></TBODY></TABLE>
+<P>Время работы данной реализации O(N<SUP>2</SUP>). Алгоритм требует O(M) памяти 
+для хранения стека вызовов процедуры <CODE>Euler_Work</CODE>. </P>
+<P>Реализация для графа, заданного списками смежности: </P>
+<TABLE class=algcode cellPadding=10>
+  <TBODY>
+  <TR>
+    <TD><PRE><SPAN class=highlight_keyword>const</SPAN>
+  MaxN = 100;
+  MaxM = 10000;
+
+<SPAN class=highlight_keyword>type</SPAN>
+  TConn = <SPAN class=highlight_keyword>record</SPAN>
+    A,B : Integer;
+  <SPAN class=highlight_keyword>end</SPAN>;
+
+<SPAN class=highlight_keyword>var</SPAN>
+  N,M : Integer;
+  GA : <SPAN class=highlight_keyword>array</SPAN> [1 .. MaxN] <SPAN class=highlight_keyword>of</SPAN> Integer;
+  GB : <SPAN class=highlight_keyword>array</SPAN> [1 .. MaxM] <SPAN class=highlight_keyword>of</SPAN> TConn;
+  W : <SPAN class=highlight_keyword>array</SPAN> [1 .. MaxM] <SPAN class=highlight_keyword>of</SPAN> Byte;
+  WS : Integer;
+
+<SPAN class=highlight_keyword>procedure</SPAN> Euler_Work(A : Integer);
+<SPAN class=highlight_keyword>var</SPAN>
+  B : Integer;
+<SPAN class=highlight_keyword>begin</SPAN>
+  <SPAN class=highlight_keyword>while</SPAN> GA[A]&lt;&gt;0 <SPAN class=highlight_keyword>do</SPAN>
+  <SPAN class=highlight_keyword>begin</SPAN>
+    B := GA[A];
+    GA[A] := GB[B].B;
+    Euler_Work(GB[B].A);
+  <SPAN class=highlight_keyword>end</SPAN>;
+  Inc(WS);
+  W[WS] := A;
+<SPAN class=highlight_keyword>end</SPAN>;
+
+<SPAN class=highlight_keyword>procedure</SPAN> Euler;
+<SPAN class=highlight_keyword>var</SPAN>
+  A,B : Integer;
+  Found : Boolean;
+<SPAN class=highlight_keyword>begin</SPAN>
+  Found := false;
+  WS := 0;
+  <SPAN class=highlight_keyword>for</SPAN> A:=1 <SPAN class=highlight_keyword>to</SPAN> N <SPAN class=highlight_keyword>do</SPAN>
+    <SPAN class=highlight_keyword>if</SPAN> (GA[A]&lt;&gt;0) <SPAN class=highlight_keyword>and</SPAN> <SPAN class=highlight_keyword>not</SPAN> Found <SPAN class=highlight_keyword>then</SPAN>
+    <SPAN class=highlight_keyword>begin</SPAN>
+      Euler_Work(A);
+      Found := true;
+    <SPAN class=highlight_keyword>end</SPAN>;
+  <SPAN class=highlight_keyword>for</SPAN> A:=WS <SPAN class=highlight_keyword>downto</SPAN> 1 <SPAN class=highlight_keyword>do</SPAN>
+    Writeln(W[A]);
+<SPAN class=highlight_keyword>end</SPAN>;
+</PRE></TD></TR></TBODY></TABLE>
+<P>Данная реализация требует O(M) времени и O(M) памяти. </P><A name=pair>
+<H2 class=alg2head>Нахождение максимальных паросочетаний</H2></A>
+<P>Рассмотрим неориентированный двудольный граф G из N вершин. <SPAN 
+class=term>Паросочетанием</SPAN> в нем называется некоторый набор ребер этого 
+графа, в котором никакие два ребра не имеют общей вершины. Размер паросочетания 
+- количество в нем ребер. Данный алгоритм находит максимальное паросочетание в 
+графе. </P>
+<P>Занумеруем отдельно вершины левой и правой долей графа (доли A и B 
+соответственно). Пусть M и N - размеры долей A и B соответственно. Пусть также 
+G[i,j]=true в том случае, если есть ребро из вершины i доли A в вершину j доли 
+B. Будем записывать решение в массивы ASol и BSol размеров M и N соответственно, 
+где ASol[i]=0, если вершина i доли A не входит в паросочетание; иначе ASol[i] - 
+номер вершины из доли B, с которой соединена i-я вершина в доле A. Аналогично 
+определяется BSol[i]. </P>
+<P>Будем делить все ребра на две группы: входящие в текущее паросочетание (<SPAN 
+class=term>обратные</SPAN>) и не входящие в него (<SPAN 
+class=term>прямые</SPAN>). Вначале все ребра прямые. Легко проверить, является 
+ли ребро, соединяющее i-ю вершину доли A с j-й вершиной доли B, обратным: это 
+верно в том случае, когда ASol[i]=j (или BSol[j]=i). Назовем <SPAN 
+class=term>чередующимся путем</SPAN> такой путь в графе из некоторой вершины 
+доли A в некоторую вершину доли B, oчто для любых двух последовательных вершин C 
+и D из этого пути верно следующее: если С лежит в доле A, а D - в доле B, то 
+ребро (C,D) прямое; иначе оно обратное. (В силу двудольности графа вершины C и D 
+не могут лежать в одной доле.) </P>
+<P>Идея алгоритма следующая: находим в графе чередующиеся пути и разворачиваем 
+их, пока не сможем найти очередной чередующийся путь; в этом случае работа 
+алгоритма завершается и построенное паросочетание (записанное в ASol и BSol) 
+будет максимальным. <SPAN class=term>Разворот</SPAN> пути заключается в 
+следующем: мы меняем статус каждого из его ребер на противоположный, т. е. 
+прямое ребро становится обратным, а обратное - прямым. Заметим, что при этом 
+размер нашего паросочетания увеличивается на единицу. Мы будем перебирать 
+чередующиеся пути, по одному для каждой начальной вершины. </P>
+<P>Реализация алгоритма: </P>
+<TABLE class=algcode cellPadding=10>
+  <TBODY>
+  <TR>
+    <TD><PRE><SPAN class=highlight_keyword>const</SPAN>
+  MaxN = 100;
+  MaxM = MaxN;
+
+<SPAN class=highlight_keyword>var</SPAN>
+  M,N : Integer;
+  G : <SPAN class=highlight_keyword>array</SPAN> [1 .. MaxN,1 .. MaxN] <SPAN class=highlight_keyword>of</SPAN> Boolean;
+  Cur,ACur : Integer;
+  ASol,BSol,Prev : <SPAN class=highlight_keyword>array</SPAN> [1 .. MaxN] <SPAN class=highlight_keyword>of</SPAN> Integer;
+  Ql,Qr : Integer;
+  Q : <SPAN class=highlight_keyword>array</SPAN> [1 .. MaxN*2+1] <SPAN class=highlight_keyword>of</SPAN> Integer;
+
+<SPAN class=highlight_keyword>function</SPAN> PBFS(A : Integer) : Boolean;
+<SPAN class=highlight_keyword>var</SPAN>
+  B : integer;
+  Found : Boolean;
+<SPAN class=highlight_keyword>begin</SPAN>
+  fillchar(Prev,sizeof(Prev),0);
+  Ql := 1;
+  Qr := 1;
+  Q[1] := A;
+  Found := false;
+  <SPAN class=highlight_keyword>while</SPAN> (Qr&gt;=Ql) <SPAN class=highlight_keyword>and</SPAN> <SPAN class=highlight_keyword>not</SPAN> Found <SPAN class=highlight_keyword>do</SPAN>
+  <SPAN class=highlight_keyword>begin</SPAN>
+    Cur := Q[Ql];
+    Inc(Ql);
+    <SPAN class=highlight_keyword>for</SPAN> B:=1 <SPAN class=highlight_keyword>to</SPAN> N <SPAN class=highlight_keyword>do</SPAN>
+      <SPAN class=highlight_keyword>if</SPAN> G[Cur,B] <SPAN class=highlight_keyword>then</SPAN>
+      <SPAN class=highlight_keyword>begin</SPAN>
+        ACur := B;
+        <SPAN class=highlight_keyword>if</SPAN> BSol[ACur]=0 <SPAN class=highlight_keyword>then</SPAN>
+        <SPAN class=highlight_keyword>begin</SPAN>
+          Found := true;
+          break;
+        <SPAN class=highlight_keyword>end</SPAN>
+        <SPAN class=highlight_keyword>else</SPAN> <SPAN class=highlight_keyword>if</SPAN> Prev[Bsol[ACur]]=0 <SPAN class=highlight_keyword>then</SPAN>
+        <SPAN class=highlight_keyword>begin</SPAN>
+          Prev[BSol[ACur]]:=Cur;
+          inc(Qr);
+          Q[Qr]:=BSol[ACur];
+        <SPAN class=highlight_keyword>end</SPAN>;
+      <SPAN class=highlight_keyword>end</SPAN>;
+     <SPAN class=highlight_keyword>end</SPAN>;
+     PBFS:=Found;
+<SPAN class=highlight_keyword>end</SPAN>;
+
+<SPAN class=highlight_keyword>procedure</SPAN> PMax;
+<SPAN class=highlight_keyword>var</SPAN>
+  A,B : Integer;
+  Tmp : Integer;
+<SPAN class=highlight_keyword>begin</SPAN>
+  fillchar(ASol,sizeof(ASol),0);
+  fillchar(BSol,sizeof(BSol),0);
+  <SPAN class=highlight_keyword>for</SPAN> A:=1 <SPAN class=highlight_keyword>to</SPAN> M <SPAN class=highlight_keyword>do</SPAN>
+    <SPAN class=highlight_keyword>if</SPAN> PBFS(A) <SPAN class=highlight_keyword>then</SPAN>
+      <SPAN class=highlight_keyword>while</SPAN> Cur&lt;&gt;0 <SPAN class=highlight_keyword>do</SPAN>
+      <SPAN class=highlight_keyword>begin</SPAN>
+        Tmp:=ASol[Cur];
+        BSol[ACur]:=Cur;
+        ASol[Cur]:=ACur;
+        Cur:=Prev[Cur];
+        ACur:=Tmp;
+      <SPAN class=highlight_keyword>end</SPAN>;
+<SPAN class=highlight_keyword>end</SPAN>;
+</PRE></TD></TR></TBODY></TABLE>
+<P>Например, для двудольного графа на рис. 2 справа получим ASol=(1,3,2), 
+BSol=(1,3,2), т. е. в максимальное паросочетание войдут ребра 1-4, 2-6, 3-5. 
+</P>
+<P>Процедура <CODE>PBFS</CODE> делает O(N<SUP>2</SUP>) действий, и ее вызывают N 
+раз; значит, время работы алгоритма - O(N<SUP>3</SUP>). Требуется O(N) 
+дополнительной памяти. </P><BR>
+<HR>
+
+<TABLE style="FONT-SIZE: 10pt" width="100%">
+  <TBODY>
+  <TR>
+    <TD align=left>© Semyon Dyatlov</TD>
+    <TD align=right><A href="mailto:dyatl@narod.ru">Mail 
+me</A></TD></TR></TBODY></TABLE><A style="FONT-SIZE: 8pt; COLOR: white" 
+href="http://pco.iis.nsk.su/~dyatlov/alg/graph/fakes.php">Interesting things</A> 
+</BODY></HTML>

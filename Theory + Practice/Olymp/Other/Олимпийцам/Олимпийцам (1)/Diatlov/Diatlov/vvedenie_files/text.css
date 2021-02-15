@@ -1,0 +1,66 @@
+H1 {
+	FONT-SIZE: 18pt; COLOR: black; FONT-FAMILY: Arial
+}
+H3 {
+	FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Arial
+}
+A {
+	COLOR: blue; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: red
+}
+A:active {
+	COLOR: red
+}
+.data_category {
+	COLOR: black; BACKGROUND-COLOR: #dfdfff
+}
+.data_left {
+	COLOR: black; BACKGROUND-COLOR: #dfffff
+}
+.data_right {
+	COLOR: black; BACKGROUND-COLOR: #bfffff
+}
+.term {
+	FONT-STYLE: oblique
+}
+.description {
+	FONT-WEIGHT: normal
+}
+.pref {
+	FONT-WEIGHT: bold
+}
+.alghead {
+	FONT-SIZE: 14pt; COLOR: black; FONT-FAMILY: Arial
+}
+.alg2head {
+	FONT-SIZE: 12pt; COLOR: black; FONT-STYLE: italic; FONT-FAMILY: Arial
+}
+.algcode {
+	FONT-SIZE: 10pt; COLOR: yellow; FONT-FAMILY: Courier; BACKGROUND-COLOR: navy; line-spacing: 20pt
+}
+.highlight_keyword {
+	COLOR: white
+}
+.highlight_comment {
+	COLOR: #c0c0c0
+}
+.highlight_string {
+	COLOR: cyan
+}
+.math {
+	FONT-STYLE: italic
+}
+.func {
+	FONT-STYLE: normal
+}
+.problem-title {
+	FONT-SIZE: 14pt; COLOR: black; FONT-FAMILY: Arial
+}
+.problem-info {
+	FONT-STYLE: italic
+}
+.problem-category {
+	FONT-WEIGHT: bold; FONT-SIZE: 12pt
+}
